@@ -45,6 +45,7 @@
     <orderEntry type="module" module-name="kotlin.base.fe10.highlighting" scope="RUNTIME" />
     <orderEntry type="module" module-name="kotlin.base.fe10.code-insight" scope="RUNTIME" />
     <orderEntry type="module" module-name="kotlin.base.fe10.obsolete-compat" scope="RUNTIME" />
+    <!-- <orderEntry type="module" module-name="kotlin.base.fe10.project-structure" scope="RUNTIME" /> -->
     <orderEntry type="module" module-name="kotlin.compiler-plugins.allopen.common" scope="RUNTIME" />
     <orderEntry type="module" module-name="kotlin.compiler-plugins.allopen.gradle" scope="RUNTIME" />
     <orderEntry type="module" module-name="kotlin.compiler-plugins.allopen.maven" scope="RUNTIME" />
@@ -52,9 +53,9 @@
     <orderEntry type="module" module-name="kotlin.compiler-plugins.compiler-plugin-support.gradle" scope="RUNTIME" />
     <orderEntry type="module" module-name="kotlin.compiler-plugins.compiler-plugin-support.maven" scope="RUNTIME" />
     <orderEntry type="module" module-name="kotlin.compiler-plugins.kapt" scope="RUNTIME" />
-    <orderEntry type="module" module-name="kotlin.compiler-plugins.kotlinx-serialization.common" scope="RUNTIME" />
-    <orderEntry type="module" module-name="kotlin.compiler-plugins.kotlinx-serialization.gradle" scope="RUNTIME" />
-    <orderEntry type="module" module-name="kotlin.compiler-plugins.kotlinx-serialization.maven" scope="RUNTIME" />
+    <!-- <orderEntry type="module" module-name="kotlin.compiler-plugins.kotlinx-serialization.common" scope="RUNTIME" /> -->
+    <!-- <orderEntry type="module" module-name="kotlin.compiler-plugins.kotlinx-serialization.gradle" scope="RUNTIME" />
+    <orderEntry type="module" module-name="kotlin.compiler-plugins.kotlinx-serialization.maven" scope="RUNTIME" /> -->
     <orderEntry type="module" module-name="kotlin.compiler-plugins.noarg.common" scope="RUNTIME" />
     <orderEntry type="module" module-name="kotlin.compiler-plugins.noarg.gradle" scope="RUNTIME" />
     <orderEntry type="module" module-name="kotlin.compiler-plugins.noarg.maven" scope="RUNTIME" />
@@ -113,7 +114,7 @@
     <orderEntry type="module" module-name="kotlin.maven" scope="RUNTIME" />
     <orderEntry type="module" module-name="kotlin.ml-completion" scope="RUNTIME" />
     <orderEntry type="module" module-name="kotlin.code-insight.live-templates-shared" scope="RUNTIME" />
-    <orderEntry type="module" module-name="kotlin.code-insight.live-templates-k1" scope="RUNTIME" />
+    <!-- <orderEntry type="module" module-name="kotlin.code-insight.live-templates-k1" scope="RUNTIME" /> -->
     <orderEntry type="module" module-name="kotlin.native" scope="RUNTIME" />
     <orderEntry type="module" module-name="kotlin.project-wizard.core" scope="RUNTIME" />
     <orderEntry type="module" module-name="kotlin.project-wizard.idea" scope="RUNTIME" />
@@ -144,7 +145,7 @@
     <orderEntry type="module" module-name="kotlin.code-insight.override-implement-k1" scope="RUNTIME" />
     <orderEntry type="module" module-name="kotlin.code-insight.override-implement-shared" scope="RUNTIME" />
     <orderEntry type="module" module-name="kotlin.code-insight.intentions-k1" scope="RUNTIME" />
-    <orderEntry type="module" module-name="kotlin.code-insight.postfix-templates-k1" scope="RUNTIME" />
+    <!-- <orderEntry type="module" module-name="kotlin.code-insight.postfix-templates-k1" scope="RUNTIME" /> -->
     <orderEntry type="module" module-name="kotlin.code-insight.structural-search-k1" scope="RUNTIME" />
     <orderEntry type="module" module-name="kotlin.code-insight.line-markers-shared" scope="RUNTIME" />
     <orderEntry type="module" module-name="kotlin.refactorings.common" />

@@ -16,7 +16,7 @@
     <orderEntry type="module" module-name="intellij.java.rt" />
     <orderEntry type="module" module-name="intellij.java.psi.impl" />
     <orderEntry type="module" module-name="intellij.platform.testFramework" />
-    <orderEntry type="module" module-name="intellij.java.tests" scope="RUNTIME" />
+    <!-- <orderEntry type="module" module-name="intellij.java.tests" scope="RUNTIME" /> -->
     <orderEntry type="module" module-name="intellij.java.testFramework" />
     <orderEntry type="module" module-name="intellij.platform.vcs.impl" />
   </component>

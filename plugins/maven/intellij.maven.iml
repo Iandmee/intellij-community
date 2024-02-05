@@ -41,7 +41,13 @@
     <orderEntry type="module" module-name="intellij.properties.psi" />
     <orderEntry type="module-library">
       <library name="plexus-archiver" type="repository">
-        <properties include-transitive-deps="false" maven-id="org.codehaus.plexus:plexus-archiver:3.0.3" />
+        <properties include-transitive-deps="false" maven-id="org.codehaus.plexus:plexus-archiver:3.0.3">
+          <verification>
+            <artifact url="file://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-archiver/3.0.3/plexus-archiver-3.0.3.jar">
+              <sha256sum>779d4a6878026fdaae6786683e33883d58f77df245fe38a7b444da12772190fc</sha256sum>
+            </artifact>
+          </verification>
+        </properties>
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-archiver/3.0.3/plexus-archiver-3.0.3.jar!/" />
         </CLASSES>
@@ -57,7 +63,7 @@
     <orderEntry type="library" name="Slf4j" level="project" />
     <orderEntry type="library" name="slf4j-jdk14" level="project" />
     <orderEntry type="module" module-name="intellij.platform.jps.build" />
-    <orderEntry type="module" module-name="intellij.maven.errorProne.compiler" scope="RUNTIME" />
+    <!-- <orderEntry type="module" module-name="intellij.maven.errorProne.compiler" scope="RUNTIME" /> -->
     <orderEntry type="library" name="NanoXML" level="project" />
     <orderEntry type="module" module-name="intellij.platform.workspaceModel.storage" />
     <orderEntry type="module" module-name="intellij.platform.workspaceModel.jps" />

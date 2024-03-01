@@ -52,7 +52,7 @@ public class JavaFormatterInEditorTest extends LightPlatformCodeInsightTestCase 
         import static java.util.concurrent.atomic.AtomicInteger.*;
 
         /**
-         * Some really long javadoc comment\s
+         * Some really long javadoc comment
          * which exceeeds the right margin
          */
         class <caret>Test {
@@ -72,7 +72,7 @@ public class JavaFormatterInEditorTest extends LightPlatformCodeInsightTestCase 
     String before = """
       class Test {
           void test() {
-               <caret>      \s
+               <caret>      
           }
       }""";
     doTest(before, text);
@@ -82,7 +82,7 @@ public class JavaFormatterInEditorTest extends LightPlatformCodeInsightTestCase 
     String before = """
       public class Test {
               int a;
-         \s
+         
           public static void main(String[] args) {
                            <caret>
           }
@@ -104,9 +104,9 @@ public class JavaFormatterInEditorTest extends LightPlatformCodeInsightTestCase 
     before = """
       public class Test {
               int a;
-         \s
+         
           public static void main(String[] args) {
-                           <caret>          \s
+                           <caret>          
           }
 
           static final long j = 2;
@@ -118,7 +118,7 @@ public class JavaFormatterInEditorTest extends LightPlatformCodeInsightTestCase 
     String before = """
       public class Test {
               int a;
-         \s
+         
           public static void main(String[] args) {
                            <caret>
                   }
@@ -140,9 +140,9 @@ public class JavaFormatterInEditorTest extends LightPlatformCodeInsightTestCase 
     before = """
       public class Test {
               int a;
-         \s
+         
           public static void main(String[] args) {
-                           <caret>          \s
+                           <caret>          
                       }
 
           static final long j = 2;
@@ -201,11 +201,11 @@ public class JavaFormatterInEditorTest extends LightPlatformCodeInsightTestCase 
 
           class Foo {
               Integer[] foo() {
-                   \s
-                      \s
+                   
+                      
                   return new Integer[]{0, 1};
               }
-               \s
+               
           }""";
       
       final String expected =
@@ -214,11 +214,11 @@ public class JavaFormatterInEditorTest extends LightPlatformCodeInsightTestCase 
 
           class Foo {
               Integer[] foo() {
-                 \s
-                 \s
+                 
+                 
                   return new Integer[]{0, 1};
               }
-             \s
+             
           }""";
 
       configureFromFileText(getTestName(false) + ".java", initial);

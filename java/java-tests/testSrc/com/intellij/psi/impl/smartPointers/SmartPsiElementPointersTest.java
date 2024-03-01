@@ -420,7 +420,7 @@ public class SmartPsiElementPointersTest extends JavaCodeInsightTestCase {
 
   public void testPointerDisambiguationAfterDupLine() {
     String text = """
-      class XXX{ void foo() {\s
+      class XXX{ void foo() {
        <caret>foo();
       }}""";
     PsiJavaFile file = (PsiJavaFile)configureByText(JavaFileType.INSTANCE, text);

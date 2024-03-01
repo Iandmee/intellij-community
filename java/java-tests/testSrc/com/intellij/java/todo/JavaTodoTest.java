@@ -20,7 +20,7 @@ public class JavaTodoTest extends TodoItemsTestCase {
     checkTodos("""
                  class C {
                      // [TODO first line]
-                    \s
+                    
                      //  second line
                  }""");
   }

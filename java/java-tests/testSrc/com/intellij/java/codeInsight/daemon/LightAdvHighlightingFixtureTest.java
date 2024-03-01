@@ -271,8 +271,8 @@ public class LightAdvHighlightingFixtureTest extends LightJavaCodeInsightFixture
                           public Object get(Inner key) {
                            return null;
                           }
-                          public Inner get1() {return null;}\s
-                          public Inner f;\s
+                          public Inner get1() {return null;}
+                          public Inner f;
                           protected class Inner {}
                          }""");
     doTest();

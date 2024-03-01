@@ -36,10 +36,10 @@ public class IndentingBackspaceHandlerUncommittedDocumentTest extends LightPlatf
                           """
                             class Foo {
                                 void m1() {
-                               \s
+                               
                                 <caret>}
                                 void m2() {
-                               \s
+                               
                                 <caret>}
                             }""");
     backspace();

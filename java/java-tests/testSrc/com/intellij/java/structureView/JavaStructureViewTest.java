@@ -42,7 +42,7 @@ public class JavaStructureViewTest extends LightJavaStructureViewTestCaseBase {
         int num = 1;
         Object o1 = new Object(){};
         Object o2 = new Object(){};
-      }; \s
+      }; 
     }""";
   private static final int ANNO_FIELD_COUNT = 13;
   private static final int FIELD_COUNT = 1;
@@ -136,7 +136,7 @@ public class JavaStructureViewTest extends LightJavaStructureViewTestCaseBase {
 
   public void testPropertiesGrouping1() {
     doPropertiesTest("""
-                       class Foo {\s
+                       class Foo {
                          int i;
                          void setI(int i){}
                          int getI(){} }""",
@@ -153,7 +153,7 @@ public class JavaStructureViewTest extends LightJavaStructureViewTestCaseBase {
 
   public void testPropertiesGrouping2() {
     doPropertiesTest("""
-                       class Foo {\s
+                       class Foo {
                          void setI(int i){}
                          int getI(){} }""",
 
@@ -168,7 +168,7 @@ public class JavaStructureViewTest extends LightJavaStructureViewTestCaseBase {
 
   public void testPropertiesGrouping3() {
     doPropertiesTest("""
-                       class Foo {\s
+                       class Foo {
                          String i;
                          void setI(int i){}
                          int getI(){} }""",
@@ -185,7 +185,7 @@ public class JavaStructureViewTest extends LightJavaStructureViewTestCaseBase {
 
   public void testPropertiesGrouping4() {
     doPropertiesTest("""
-                       class Foo {\s
+                       class Foo {
                          int i;
                          int getI(){} }""",
 
@@ -200,7 +200,7 @@ public class JavaStructureViewTest extends LightJavaStructureViewTestCaseBase {
 
   public void testPropertiesGrouping5() {
     doPropertiesTest("""
-                       class Foo {\s
+                       class Foo {
                          void setI(int i){}
                         }""",
 
@@ -214,7 +214,7 @@ public class JavaStructureViewTest extends LightJavaStructureViewTestCaseBase {
 
   public void testPropertiesGrouping6() {
     doPropertiesTest("""
-                       class Foo {\s
+                       class Foo {
                          void setI(String i){}
                          int getI(){} }""",
 
@@ -230,8 +230,8 @@ public class JavaStructureViewTest extends LightJavaStructureViewTestCaseBase {
 
   public void testPropertiesGrouping7() {
     doPropertiesTest("""
-                       class Foo {\s
-                         int i:\s
+                       class Foo {
+                         int i:
                         }""",
 
                      """
@@ -243,7 +243,7 @@ public class JavaStructureViewTest extends LightJavaStructureViewTestCaseBase {
 
   public void testPropertiesGrouping8() {
     doPropertiesTest("""
-                       class Foo {\s
+                       class Foo {
                          static void setI(int i){}
                          int getI(){} }""",
 
@@ -265,7 +265,7 @@ public class JavaStructureViewTest extends LightJavaStructureViewTestCaseBase {
                  }
                  new Runnable(){
                    public void run(){
-                     class Inner2{}     \s
+                     class Inner2{}     
              }    };
                }
              }""",
@@ -295,7 +295,7 @@ public class JavaStructureViewTest extends LightJavaStructureViewTestCaseBase {
             //endregion
 
 
-            //region without empty row \s
+            //region without empty row 
             public static void foo(String p) {
 
                 System.out.println(p);

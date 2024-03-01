@@ -41,8 +41,8 @@ public class JavaAutoIndentLinesTest extends AbstractEditorTest {
       public class Main {
           public static void main(String[] args) {
               <selection>if (args.length > 2) {
-             \s
-             \s
+             
+             
                   System.out.println("Too many args");
               }</selection>
           }
@@ -55,8 +55,8 @@ public class JavaAutoIndentLinesTest extends AbstractEditorTest {
       public class Main {
           public static void main(String[] args) {
               if (args.length > 2) {
-                 \s
-                 \s
+                 
+                 
                   System.out.println("Too many args");
               }
           }

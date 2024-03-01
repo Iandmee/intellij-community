@@ -31,7 +31,7 @@ public class PlainTextEnterActionTest extends AbstractEnterActionTestCase {
       """
            class Foo {
            <caret>
-           }\
+           }
         """
     );
   }
@@ -44,7 +44,7 @@ public class PlainTextEnterActionTest extends AbstractEnterActionTestCase {
       "* Bullet one.  <caret>Bullet two.",
       """
         Here is a list of bullet points:
-        * Bullet one. \s
+        * Bullet one. 
         <caret>Bullet two."""
     );
   }

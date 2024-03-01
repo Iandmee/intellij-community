@@ -2526,7 +2526,7 @@ public class NormalCompletionTest extends NormalCompletionTestCase {
         static class X {
           int variable;
         }
-       \s
+       
         public void test(long variable) {
           new X() {
             double myDouble = vari<caret>
@@ -2540,7 +2540,7 @@ public class NormalCompletionTest extends NormalCompletionTestCase {
                               static class X {
                                 int variable;
                               }
-                             \s
+                             
                               public void test(long variable) {
                                 new X() {
                                   double myDouble = variable

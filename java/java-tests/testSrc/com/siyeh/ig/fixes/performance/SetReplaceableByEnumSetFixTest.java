@@ -20,7 +20,7 @@ public class SetReplaceableByEnumSetFixTest extends IGQuickFixesTestCase {
                            implements Cloneable, java.io.Serializable
                          {
                            EnumSet(Class<E>elementType, Enum<?>[] universe) {
-                            \s
+                            
                            }
                          }""");
     myFixture.addClass("""

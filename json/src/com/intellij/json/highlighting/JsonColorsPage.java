@@ -71,7 +71,7 @@ public class JsonColorsPage implements RainbowColorSettingsPage, DisplayPriority
           42,
           -0.0e-0,
           6.626e-34
-        ]\s
+        ]
       }""";
   }
 

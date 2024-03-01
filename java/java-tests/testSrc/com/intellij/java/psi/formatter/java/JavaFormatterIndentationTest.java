@@ -355,14 +355,14 @@ public class JavaFormatterIndentationTest extends AbstractJavaFormatterTest {
     doMethodTest(
       """
         foo("long string as the first argument", new Runnable() {
-        public void run() {                        \s
-        }                                       \s
-        },                                           \s
-        new Runnable() {                        \s
-        public void run() {                \s
-        }                                         \s
-        }                                            \s
-        );                                                      \s""",
+        public void run() {                        
+        }                                       
+        },                                           
+        new Runnable() {                        
+        public void run() {                
+        }                                         
+        }                                            
+        );                                                      """,
       """
         foo("long string as the first argument", new Runnable() {
                     public void run() {
@@ -724,7 +724,7 @@ public class JavaFormatterIndentationTest extends AbstractJavaFormatterTest {
       class Formatting {
           void test() {
               String block = ""\"
-                                  \s
+                                  
        text
       block""\";
           }
@@ -734,7 +734,7 @@ public class JavaFormatterIndentationTest extends AbstractJavaFormatterTest {
       class Formatting {
           void test() {
               String block = ""\"
-                                                  \s
+                                                  
                        text
                       block""\";
           }

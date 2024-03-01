@@ -95,7 +95,7 @@ public class JavaReparseTest extends AbstractReparseTestCase {
   public void testReparseAfterReformatReplacesWhitespaceNodesOnly() {
     @NonNls final String text =
       """
-        class  RedTest   {  \s
+        class  RedTest   {  
 
 
 
@@ -103,27 +103,27 @@ public class JavaReparseTest extends AbstractReparseTestCase {
 
 
 
-           String  [  ]  [  ]   test    =    {       {\s
+           String  [  ]  [  ]   test    =    {       {
 
 
 
 
-         {    ""} \s
+         {    ""} 
 
 
 
 
-         };   String  [  ]  [  ]   test    =    {       {\s
+         };   String  [  ]  [  ]   test    =    {       {
 
 
 
 
-         {    ""} \s
+         {    ""} 
 
 
 
 
-         };                        \s
+         };                        
 
 
 
@@ -131,7 +131,7 @@ public class JavaReparseTest extends AbstractReparseTestCase {
 
 
 
-          } \s""";
+          } """;
 
     final PsiFile file = myFixture.addFileToProject("aaa.java", text);
     final int[] added = {0};

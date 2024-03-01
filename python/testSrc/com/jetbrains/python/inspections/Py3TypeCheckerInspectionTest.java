@@ -297,18 +297,18 @@ public class Py3TypeCheckerInspectionTest extends PyInspectionTestCase {
               x = attr.ib()
               y = attr.ib(default=0)
               z = attr.ib(default=attr.Factory(list))
-             \s
+             
           Weak1(1, <warning descr="Expected type 'int', got 'str' instead">"str"</warning>, <warning descr="Expected type 'list', got 'int' instead">2</warning>)
 
 
           @attr.s
           class Weak2:
               x = attr.ib()
-             \s
+             
               @x.default
               def __init_x__(self):
                   return 1
-             \s
+             
           Weak2("str")
 
 
@@ -317,7 +317,7 @@ public class Py3TypeCheckerInspectionTest extends PyInspectionTestCase {
               x = attr.ib(type=int)
               y = attr.ib(default=0, type=int)
               z = attr.ib(default=attr.Factory(list), type=typing.List[int])
-             \s
+             
           Strong(1, <warning descr="Expected type 'int', got 'str' instead">"str"</warning>, <warning descr="Expected type 'list[int]', got 'list[str]' instead">["str"]</warning>)"""
       )
     );

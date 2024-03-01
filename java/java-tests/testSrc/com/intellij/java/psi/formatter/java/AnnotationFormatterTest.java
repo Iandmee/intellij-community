@@ -292,7 +292,7 @@ public class AnnotationFormatterTest extends JavaFormatterTestCase {
   public void testSpaces7() {
     doTextTest("""
                  public interface PsiClass{
-                     @ Nullable  ( documentation    =  "parameter1 value"   ,doc2="parameter2 value"   ) \s
+                     @ Nullable  ( documentation    =  "parameter1 value"   ,doc2="parameter2 value"   ) 
                      String getQualifiedName();
                  }""",
                """
@@ -344,8 +344,7 @@ public class AnnotationFormatterTest extends JavaFormatterTestCase {
                            {
                            return colour;
                            }
-                     }\
-                   """, """
+                     }                   """, """
                    enum Breed {
                        Dalmatian("spotted"),
                        Labrador("black"),
@@ -366,8 +365,7 @@ public class AnnotationFormatterTest extends JavaFormatterTestCase {
       doTextTest("""
                      enum Breed {
                         Dalmatian (  "spotted" ),Labrador ( "black" ),Dachshund( "brown" )
-                     }\
-                   """,
+                     }                   """,
                  """
                    enum Breed {
                        Dalmatian("spotted"),
@@ -375,11 +373,11 @@ public class AnnotationFormatterTest extends JavaFormatterTestCase {
                        Dachshund("brown")
                    }""");
       doTextTest("""
-                   enum Command {\s
-                           USED\s
-                           ,\s
+                   enum Command {
+                           USED
+                           ,
                            UNUSED
-                   ;\s
+                   ;
                     }""",
                  """
                    enum Command {

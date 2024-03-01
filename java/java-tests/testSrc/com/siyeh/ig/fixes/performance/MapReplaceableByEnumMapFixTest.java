@@ -20,7 +20,7 @@ public class MapReplaceableByEnumMapFixTest extends IGQuickFixesTestCase {
                            implements java.io.Serializable, Cloneable
                          {
                            public EnumMap(Class<K> keyType) {
-                            \s
+                            
                            }
                          }""");
 

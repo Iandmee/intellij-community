@@ -282,12 +282,12 @@ public class JavaFormatterWrapTest extends AbstractJavaFormatterTest {
         }""",
       """
         class TestClass {
-            // Single line comment that is long enough\s
+            // Single line comment that is long enough
             // to exceed right margin
-            /* Multi line comment that is long enough\s
+            /* Multi line comment that is long enough
             to exceed right margin*/
             /**
-             * Javadoc comment that is long enough to\s
+             * Javadoc comment that is long enough to
              * exceed right margin
              */
             public String s = "this is a string that is" +
@@ -310,7 +310,7 @@ public class JavaFormatterWrapTest extends AbstractJavaFormatterTest {
         }""",
       """
         class TestClass {
-        \t//This is a\s
+        \t//This is a
         \t// comment
         }"""
     );
@@ -338,7 +338,7 @@ public class JavaFormatterWrapTest extends AbstractJavaFormatterTest {
       initial,
       """
         class TestClass {
-            //This is a\s
+            //This is a
             // comment
             //This is another comment
         }"""
@@ -1188,8 +1188,7 @@ public class JavaFormatterWrapTest extends AbstractJavaFormatterTest {
               case LONG_NAME_A -> throw new IllegalStateException("long text long text long text long text long text long text  |  long text");
               case LONG_NAME_B -> "text";
             };
-          }\
-        """,
+          }        """,
 
       """
         String process(E e) {

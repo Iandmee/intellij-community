@@ -300,7 +300,7 @@ public class FileEncodingTest extends HeavyPlatformTestCase implements TestDialo
     String content = """
       <html>
       <head>
-      <meta http-equiv="content-type" content="text/html;charset=us-ascii">\s
+      <meta http-equiv="content-type" content="text/html;charset=us-ascii">
       </head>
       <body>
       xyz

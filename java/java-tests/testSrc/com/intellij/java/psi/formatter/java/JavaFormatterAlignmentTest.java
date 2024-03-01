@@ -832,7 +832,7 @@ public class JavaFormatterAlignmentTest extends AbstractJavaFormatterTest {
       """
             System.out.println("AAAA");
             int a = 2;
-           \s
+           
             {
               int x=2;
               String name=3;
@@ -950,7 +950,7 @@ public class JavaFormatterAlignmentTest extends AbstractJavaFormatterTest {
         public class Test {
           void foo(int a, int xyz) {
             a = 9999;
-            xyz = a =\s
+            xyz = a =
             a = 12;
           }
         }""",
@@ -978,7 +978,7 @@ public class JavaFormatterAlignmentTest extends AbstractJavaFormatterTest {
             a = 9999;
             int basdf = 1234;
             int as = 3;
-            xyz = a =\s
+            xyz = a =
             a = 12;
           }
         }""",
@@ -1048,9 +1048,9 @@ public class JavaFormatterAlignmentTest extends AbstractJavaFormatterTest {
 
             public static void main(String[] args) {
               try {
-               \s
+               
               } catch (FooException | BarException | FooBarException | FooBarFooException | BarBarFooException | BarFooFooException e) {
-               \s
+               
               }
             }
         }""",

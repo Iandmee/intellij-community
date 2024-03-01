@@ -116,7 +116,7 @@ public class GradleApplicationEnvironmentProviderTest extends GradleSettingsImpo
             String fileContent = new App().readFile();
             System.out.println("File Content: " + fileContent);
           }
-         \s
+         
           public String readFile() throws IOException {
             try (InputStream is =
                    getClass().getClassLoader().getResourceAsStream("file.txt")) {

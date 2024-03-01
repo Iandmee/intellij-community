@@ -387,7 +387,7 @@ public abstract class AbstractBasicJavaLexerTest extends LexerTestCase {
              WHITE_SPACE ('\\n')""");
     doTest("""
              ""\"
-                   "\\{}""\"""",
+                   "\\{}"" """,
            """
              TEXT_BLOCK_TEMPLATE_BEGIN ('""\"\\n      "\\{')
              TEXT_BLOCK_TEMPLATE_END ('}""\"')""");
@@ -395,7 +395,7 @@ public abstract class AbstractBasicJavaLexerTest extends LexerTestCase {
              STR.""\"
              xx
              \\{STR."String \\{a} String"}
-             xx""\"""",
+             xx"" """,
            """
              IDENTIFIER ('STR')
              DOT ('.')
@@ -405,7 +405,7 @@ public abstract class AbstractBasicJavaLexerTest extends LexerTestCase {
              STRING_TEMPLATE_BEGIN ('"String \\{')
              IDENTIFIER ('a')
              STRING_TEMPLATE_END ('} String"')
-             TEXT_BLOCK_TEMPLATE_END ('}\\nxx""\"')""");
+             TEXT_BLOCK_TEMPLATE_END ('}\\nxx""')""");
   }
 
   public void testStringLiterals() {

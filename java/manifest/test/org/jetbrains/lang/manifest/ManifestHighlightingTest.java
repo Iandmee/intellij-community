@@ -22,7 +22,7 @@ public class ManifestHighlightingTest extends LightJavaCodeInsightFixtureTestCas
     doTest(
       """
         Normal-Header: value
-        Empty_Header:\s
+        Empty_Header:
         <error descr="Invalid header name">Extra-Space </error>: value
         <error descr="Invalid header name">Other*Header</error>: value
         """);

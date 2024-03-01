@@ -16,8 +16,7 @@ public class JavaTypeProviderTest extends LightJavaCodeInsightTestCase {
                void test(int x) {
                  x = Math.abs(x);
                  <selection>x</selection>
-               }\
-             """, "int",
+               }             """, "int",
            "<table>" +
            "<tr><td align=\"left\" style=\"color:#909090\" valign=\"top\">Type:</td><td>int</td></tr>" +
            "<tr><td align=\"left\" style=\"color:#909090\" valign=\"top\">Range:</td><td>Integer.MIN_VALUE or &gt;= 0</td></tr>" +
@@ -63,8 +62,7 @@ public class JavaTypeProviderTest extends LightJavaCodeInsightTestCase {
                  if(t.isPresent()) {
                    <selection>t</selection>
                  }
-               }\
-             """, "Optional&lt;String&gt;",
+               }             """, "Optional&lt;String&gt;",
            "<table>" +
            "<tr><td align=\"left\" style=\"color:#909090\" valign=\"top\">Type:</td><td>Optional&lt;String&gt;</td></tr>" +
            "<tr><td align=\"left\" style=\"color:#909090\" valign=\"top\">Nullability:</td><td>non-null</td></tr>" +
@@ -76,8 +74,7 @@ public class JavaTypeProviderTest extends LightJavaCodeInsightTestCase {
     doTest("""
                void test() {
                    Runnable r = <selection>() -> {}</selection>;
-               }\
-             """, "Runnable",
+               }             """, "Runnable",
            "<table>" +
            "<tr><td align=\"left\" style=\"color:#909090\" valign=\"top\">Type:</td><td>Runnable</td></tr>" +
            "<tr><td align=\"left\" style=\"color:#909090\" valign=\"top\">Nullability:</td><td>non-null</td></tr>" +
@@ -89,14 +86,13 @@ public class JavaTypeProviderTest extends LightJavaCodeInsightTestCase {
     doTest("""
                void x(Object a) {
                  if(a instanceof String || a instanceof Number) {
-                  \s
+                  
                  } else if(a instanceof CharSequence){
                    <selection>a</selection>
                  } else {
                    a
                  }
-               }\
-             """, "Object",
+               }             """, "Object",
            "<table>" +
            "<tr><td align=\"left\" style=\"color:#909090\" valign=\"top\">Type:</td><td>Object</td></tr>" +
            "<tr><td align=\"left\" style=\"color:#909090\" valign=\"top\">Nullability:</td><td>non-null</td></tr>" +
@@ -109,9 +105,9 @@ public class JavaTypeProviderTest extends LightJavaCodeInsightTestCase {
     doTest("""
                void x(Object a) {
                  if(a instanceof String || a instanceof Number) {
-                  \s
+                  
                  } else if(a instanceof CharSequence){
-                  \s
+                  
                  } else {
                    <selection>a</selection>
                  }

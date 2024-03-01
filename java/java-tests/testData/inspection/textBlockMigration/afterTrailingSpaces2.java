@@ -6,7 +6,7 @@ class TextBlockMigration {
     String foobarbaz = """
             foo
             bar
-             \s""";
+             """;
   }
 
 }

@@ -43,7 +43,7 @@ public class JUnitExpectedPatternsTest {
     Assert.assertNotNull(createNotification("""
                                               reason
                                               Expected: is "aaa\\naa"
-                                                   but:    was "bbb\\nbb\""""));
+                                                   but:    was "bbb\\nbb" """));
   }
 
   @Test
@@ -51,7 +51,7 @@ public class JUnitExpectedPatternsTest {
     Assert.assertNotNull(createNotification("""
                                               reason
                                               Expected: "aaa\\naa"
-                                                   got: "bbb\\nbb\""""));
+                                                   got: "bbb\\nbb" """));
   }
 
   @Test

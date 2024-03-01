@@ -36,7 +36,7 @@ public class CreateMethodFromUsageTest extends LightQuickFixParameterizedTestCas
       assertEquals("""
       class Another {
           public static void foo() {
-             \s
+             
           }
       }""", text);
     }

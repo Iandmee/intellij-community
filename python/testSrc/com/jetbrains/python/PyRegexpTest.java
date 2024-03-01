@@ -162,7 +162,7 @@ public class PyRegexpTest extends PyTestCase {
 
   public void testPercentFormattingRegexpAutoInjection() {
     doTestInjectedText("""
-                         import re\s
+                         import re
 
                          def f(x, y):
                              re.search('<caret>.*%s-%d' % (x, y), 'foo')

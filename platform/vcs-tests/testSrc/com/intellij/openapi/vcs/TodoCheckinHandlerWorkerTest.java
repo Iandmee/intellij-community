@@ -189,23 +189,23 @@ public class TodoCheckinHandlerWorkerTest extends HeavyPlatformTestCase {
     public class Essential {
      private final int i = 0; // todo check
      private final String myName;
-       \s
+       
         /* 12345
         todo in the middle
         abcde
          */
-       \s
+       
         private void m() {
             int i;  // TODO ? todo f
         }
-       \s
+       
         private void method() {
             for (Integer integer : new int[]{1, 2, 3}) {
                 System.out.println(integer);
             }
         }
-       \s
-        some\s
+       
+        some
                 red todo
         lines
         // this ok todo ok

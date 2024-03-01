@@ -47,12 +47,12 @@ public class ForwardBackwardParagraphActionTest extends AbstractEditorTest {
   public void testForwardWhenTargetLineContainsSpaces() {
     doTestForward("""
                     <caret>abc
-                      \s
+                       
                     """,
 
                   """
                     abc
-                    <caret>  \s
+                    <caret>   
                     """);
   }
 
@@ -96,14 +96,14 @@ public class ForwardBackwardParagraphActionTest extends AbstractEditorTest {
 
   public void testBackwardWhenTargetLineContainsSpaces() {
     doTestBackward("""
-                      \s
+                       
                      abc
 
                      <caret>
                      """,
 
                    """
-                      \s
+                       
                      <caret>abc
 
 
@@ -122,13 +122,13 @@ public class ForwardBackwardParagraphActionTest extends AbstractEditorTest {
     doTestBackward("""
 
                      ttt
-                      \s
+                       
                      <caret>abc""",
 
                    """
                      <caret>
                      ttt
-                      \s
+                       
                      abc""");
   }
 

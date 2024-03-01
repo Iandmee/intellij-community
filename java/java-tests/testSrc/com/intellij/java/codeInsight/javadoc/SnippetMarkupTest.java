@@ -275,7 +275,7 @@ public class SnippetMarkupTest {
       """);
     testVisitor(text, "main", true, """
       public static void main(String[] args) {
-        \s
+        
         System.out.println("Hello World");
       // [Highlight[range=(227,260), selector=Substring[substring=idx], region=, type=HIGHLIGHTED]]
         for(int idx=0; idx<10; idx++) {

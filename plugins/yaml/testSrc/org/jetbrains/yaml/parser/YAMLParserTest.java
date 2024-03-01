@@ -207,10 +207,10 @@ public class YAMLParserTest extends ParsingTestCase {
     doCodeTest("""
                  logging:
                    config:
-                  \s
-                  \s
-                  \s
-                  \s
+                  
+                  
+                  
+                  
                  """);
   }
 

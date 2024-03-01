@@ -27,7 +27,7 @@ public class JUnit5GenerationTest extends JUnit5CodeInsightTest {
              import org.junit.jupiter.api.Test; class MyTest {
                  @Test
                  void name() {
-                    \s
+                    
                  }
 
                  @Test void m2(){}}""");
@@ -43,7 +43,7 @@ public class JUnit5GenerationTest extends JUnit5CodeInsightTest {
              class MyTest { @Nested class NTest {
                  @Test
                  void name() {
-                    \s
+                    
                  }
              }}""");
   }

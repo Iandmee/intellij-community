@@ -389,11 +389,11 @@ public class IgnoreResultOfCallInspectionTest extends LightJavaInspectionTestCas
             }
             return reference;
           }
-         \s
+         
           private static String twice(String s) {
             return s+s;
           }
-         \s
+         
           void test(String string) {
             checkNotNull(string);
             /*Result of 'Test.twice()' is ignored*/twice/**/("foo");
@@ -428,13 +428,13 @@ public class IgnoreResultOfCallInspectionTest extends LightJavaInspectionTestCas
 
         class Test {
           boolean closed;
-         \s
+         
           @Contract(pure=true, value="->this")
           Test validate() {
             if(closed) throw new IllegalStateException();
             return this;
           }
-         \s
+         
           void test() {
             validate();
             System.out.println("ok");
@@ -603,7 +603,7 @@ public class IgnoreResultOfCallInspectionTest extends LightJavaInspectionTestCas
                void a() {
                  b();
                }
-              \s
+              
                static Void b() {
                  return null;
                }
@@ -620,11 +620,11 @@ public class IgnoreResultOfCallInspectionTest extends LightJavaInspectionTestCas
           public <C extends Collection<? super T>> C into(C collection) {
             return null;
           }
-         \s
+         
           public static<T> StreamEx<T> of(T... values) {
             return null;\s
           }
-         \s
+         
           public static void main(String[] args) {
             List<Integer> list = new ArrayList<>();
             StreamEx.of(1, 2, 3).into(list);

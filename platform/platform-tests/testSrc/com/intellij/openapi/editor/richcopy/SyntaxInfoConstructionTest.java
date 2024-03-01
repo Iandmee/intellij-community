@@ -44,12 +44,12 @@ public class SyntaxInfoConstructionTest extends BasePlatformTestCase {
     editor.getSelectionModel().setBlockSelection(blockSelectionStartPosition, blockSelectionEndPosition);
 
     verifySyntaxInfo("""
-                       foreground=java.awt.Color[r=0,g=0,b=128],fontStyle=1,text=public int\s
+                       foreground=java.awt.Color[r=0,g=0,b=128],fontStyle=1,text=public int 
                        foreground=java.awt.Color[r=0,g=0,b=0],fontStyle=0,text=getField() {
                        text=
 
-                       text=   \s
-                       foreground=java.awt.Color[r=0,g=0,b=128],fontStyle=1,text=return\s
+                       text=    
+                       foreground=java.awt.Color[r=0,g=0,b=128],fontStyle=1,text=return 
                        foreground=java.awt.Color[r=102,g=14,b=122],text=field
                        foreground=java.awt.Color[r=0,g=0,b=0],fontStyle=0,text=;
                        text=
@@ -83,12 +83,12 @@ public class SyntaxInfoConstructionTest extends BasePlatformTestCase {
     editor.getSelectionModel().setBlockSelection(blockSelectionStartPosition, blockSelectionEndPosition);
 
     verifySyntaxInfo("""
-                       foreground=java.awt.Color[r=0,g=0,b=128],fontStyle=1,text=public int\s
+                       foreground=java.awt.Color[r=0,g=0,b=128],fontStyle=1,text=public int 
                        foreground=java.awt.Color[r=0,g=0,b=0],fontStyle=0,text=getField() {
                        text=
 
-                       text=   \s
-                       foreground=java.awt.Color[r=0,g=0,b=128],fontStyle=1,text=return\s
+                       text=    
+                       foreground=java.awt.Color[r=0,g=0,b=128],fontStyle=1,text=return 
                        foreground=java.awt.Color[r=102,g=14,b=122],text=field
                        foreground=java.awt.Color[r=0,g=0,b=0],fontStyle=0,text=;
                        text=
@@ -116,14 +116,14 @@ public class SyntaxInfoConstructionTest extends BasePlatformTestCase {
     editor.getSelectionModel().setBlockSelection(blockSelectionStartPosition, blockSelectionEndPosition);
 
     verifySyntaxInfo("""
-                       foreground=java.awt.Color[r=0,g=0,b=128],fontStyle=1,text=int\s
+                       foreground=java.awt.Color[r=0,g=0,b=128],fontStyle=1,text=int 
                        foreground=java.awt.Color[r=102,g=14,b=122],text=field
                        foreground=java.awt.Color[r=0,g=0,b=0],fontStyle=0,text=;
                        text=
 
                        text=
 
-                       foreground=java.awt.Color[r=0,g=0,b=128],fontStyle=1,text=int\s
+                       foreground=java.awt.Color[r=0,g=0,b=128],fontStyle=1,text=int 
                        foreground=java.awt.Color[r=102,g=14,b=122],text=otherField
                        foreground=java.awt.Color[r=0,g=0,b=0],fontStyle=0,text=;
                        """);
@@ -151,11 +151,11 @@ public class SyntaxInfoConstructionTest extends BasePlatformTestCase {
     selectionModel.setSelection(selectionStart, selectionEnd);
 
     String expected = """
-      foreground=java.awt.Color[r=0,g=0,b=128],fontStyle=1,text=public int\s
+      foreground=java.awt.Color[r=0,g=0,b=128],fontStyle=1,text=public int 
       foreground=java.awt.Color[r=0,g=0,b=0],fontStyle=0,text=getField() {
 
-      text=   \s
-      foreground=java.awt.Color[r=0,g=0,b=128],fontStyle=1,text=return\s
+      text=    
+      foreground=java.awt.Color[r=0,g=0,b=128],fontStyle=1,text=return 
       foreground=java.awt.Color[r=102,g=14,b=122],text=field
       foreground=java.awt.Color[r=0,g=0,b=0],fontStyle=0,text=;
 
@@ -197,23 +197,23 @@ public class SyntaxInfoConstructionTest extends BasePlatformTestCase {
     verifySyntaxInfo("""
                        foreground=java.awt.Color[r=128,g=128,b=128],fontStyle=2,text=/**
 
-                       text= * Code in\s
+                       text= * Code in 
                        background=java.awt.Color[r=226,g=255,b=226],text=<code>
                        background=java.awt.Color[r=255,g=255,b=255],text=here
                        background=java.awt.Color[r=226,g=255,b=226],text=</code>
                        background=java.awt.Color[r=255,g=255,b=255],text=
 
-                       text= *\s
+                       text= * 
                        background=java.awt.Color[r=226,g=255,b=226],text=<strong>
                        background=java.awt.Color[r=255,g=255,b=255],text=Hi
                        background=java.awt.Color[r=226,g=255,b=226],text=</strong>
                        background=java.awt.Color[r=255,g=255,b=255],text= man
 
-                       text= *\s
-                       fontStyle=3,text=@param\s
+                       text= * 
+                       fontStyle=3,text=@param 
                        foreground=java.awt.Color[r=61,g=61,b=61],text=<T>
 
-                       text=\s
+                       text= 
                        """);
   }
 
@@ -223,8 +223,8 @@ public class SyntaxInfoConstructionTest extends BasePlatformTestCase {
            <selection>  int field;
            }</selection>""");
     verifySyntaxInfo("""
-                       text= \s
-                       foreground=java.awt.Color[r=0,g=0,b=128],fontStyle=1,text=int\s
+                       text=  
+                       foreground=java.awt.Color[r=0,g=0,b=128],fontStyle=1,text=int 
                        foreground=java.awt.Color[r=102,g=14,b=122],text=field
                        foreground=java.awt.Color[r=0,g=0,b=0],fontStyle=0,text=;
 
@@ -238,7 +238,7 @@ public class SyntaxInfoConstructionTest extends BasePlatformTestCase {
            <selection>  int field;
            </selection>}""");
     verifySyntaxInfo("""
-                       foreground=java.awt.Color[r=0,g=0,b=128],fontStyle=1,text=int\s
+                       foreground=java.awt.Color[r=0,g=0,b=128],fontStyle=1,text=int 
                        foreground=java.awt.Color[r=102,g=14,b=122],text=field
                        foreground=java.awt.Color[r=0,g=0,b=0],fontStyle=0,text=;
 
@@ -262,11 +262,11 @@ public class SyntaxInfoConstructionTest extends BasePlatformTestCase {
     myFixture.getEditor().getSelectionModel().setSelection(selectionStart, selectionEnd);
 
     verifySyntaxInfo("""
-                       foreground=java.awt.Color[r=0,g=0,b=128],fontStyle=1,text=public int\s
+                       foreground=java.awt.Color[r=0,g=0,b=128],fontStyle=1,text=public int 
                        foreground=java.awt.Color[r=0,g=0,b=0],fontStyle=0,text=getField() {
 
-                       text=   \s
-                       foreground=java.awt.Color[r=0,g=0,b=128],fontStyle=1,text=return\s
+                       text=    
+                       foreground=java.awt.Color[r=0,g=0,b=128],fontStyle=1,text=return 
                        foreground=java.awt.Color[r=102,g=14,b=122],text=field
                        foreground=java.awt.Color[r=0,g=0,b=0],fontStyle=0,text=;
 
@@ -292,11 +292,11 @@ public class SyntaxInfoConstructionTest extends BasePlatformTestCase {
     myFixture.getEditor().getSelectionModel().setSelection(selectionStart, selectionEnd);
 
     verifySyntaxInfo("""
-                       foreground=java.awt.Color[r=0,g=0,b=128],fontStyle=1,text=public int\s
+                       foreground=java.awt.Color[r=0,g=0,b=128],fontStyle=1,text=public int 
                        foreground=java.awt.Color[r=0,g=0,b=0],fontStyle=0,text=getField() {
 
-                       text=   \s
-                       foreground=java.awt.Color[r=0,g=0,b=128],fontStyle=1,text=return\s
+                       text=    
+                       foreground=java.awt.Color[r=0,g=0,b=128],fontStyle=1,text=return 
                        foreground=java.awt.Color[r=102,g=14,b=122],text=field
                        foreground=java.awt.Color[r=0,g=0,b=0],fontStyle=0,text=;
 
@@ -318,7 +318,7 @@ public class SyntaxInfoConstructionTest extends BasePlatformTestCase {
       editor.getSelectionModel().setSelection(0, document.getTextLength());
       String syntaxInfo = getSyntaxInfo(editor, psiFile);
       assertEquals("""
-                     foreground=java.awt.Color[r=0,g=0,b=128],fontStyle=1,text=class\s
+                     foreground=java.awt.Color[r=0,g=0,b=128],fontStyle=1,text=class 
                      foreground=java.awt.Color[r=0,g=0,b=0],fontStyle=0,text=Test {}
                      """, syntaxInfo);
     }

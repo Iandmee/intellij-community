@@ -112,7 +112,7 @@ public class DetectIndentAndTypeTest extends BasePlatformTestCase {
       """
         public class T {
         \tvoid run() {
-        \t\tint t = 1 +\s
+        \t\tint t = 1 +
         \t\t\t2;
         \t}
         }""");
@@ -135,7 +135,7 @@ public class DetectIndentAndTypeTest extends BasePlatformTestCase {
       """
         public class T {
         \tvoid run() {
-        \t\tint t = 1 +\s
+        \t\tint t = 1 +
         \t\t\t\t2;
         \t}
         }""");
@@ -163,7 +163,7 @@ public class DetectIndentAndTypeTest extends BasePlatformTestCase {
     myFixture.checkResult("""
                             public class T {
                             \tvoid run() {
-                            \t\tint a = 2\s
+                            \t\tint a = 2
                             \t\t\t\t<caret>+ 2;
                             \t}
                             }

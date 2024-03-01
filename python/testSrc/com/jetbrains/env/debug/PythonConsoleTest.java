@@ -284,7 +284,7 @@ public class PythonConsoleTest extends PyEnvTestCase {
                        x = 238
                        print(x + 1)
                        return "bar"
-                  \s
+        
                """);
         exec("bar = Bar()");
         exec("print(\"Hey\")");

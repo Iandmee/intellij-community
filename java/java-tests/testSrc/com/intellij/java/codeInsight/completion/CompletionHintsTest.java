@@ -1181,7 +1181,7 @@ public class CompletionHintsTest extends AbstractParameterInfoTestCase {
 
     CodeInsightSettings.getInstance().SHOW_PARAMETER_NAME_HINTS_ON_COMPLETION = false;
     configureJava("""
-                    class C {\s
+                    class C {
                       void something() {}
                       void some(int begin) {}
                       void some(int begin, int end) {}
@@ -1190,7 +1190,7 @@ public class CompletionHintsTest extends AbstractParameterInfoTestCase {
     complete("some(int begin)");
     waitForAllAsyncStuff();
     checkResultWithInlays("""
-                            class C {\s
+                            class C {
                               void something() {}
                               void some(int begin) {}
                               void some(int begin, int end) {}
@@ -1200,7 +1200,7 @@ public class CompletionHintsTest extends AbstractParameterInfoTestCase {
     home();
     waitForAllAsyncStuff();
     checkResultWithInlays("""
-                            class C {\s
+                            class C {
                               void something() {}
                               void some(int begin) {}
                               void some(int begin, int end) {}

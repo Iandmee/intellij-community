@@ -2331,7 +2331,7 @@ public class PyTypeTest extends PyTestCase {
              def bug(foo):
                  ""\"
                  Args:
-                     foo (list[int]|None): an optional list of ints\s
+                     foo (list[int]|None): an optional list of ints
                  ""\"
                  if not foo:
                      return None
@@ -2462,7 +2462,7 @@ public class PyTypeTest extends PyTestCase {
 
              def fun():
                  expr = True
-                \s
+                
                  def nuf():
                      global expr
                      expr""");
@@ -2852,7 +2852,7 @@ public class PyTypeTest extends PyTestCase {
              class C:
                  def __init__(self):
                      self.attr = None
-                \s
+                
                  def m(self):
                      if self.attr is None:
                          self.attr = 42
@@ -3049,7 +3049,7 @@ public class PyTypeTest extends PyTestCase {
 
              class A(NamedTuple("NT", [("user", str)])):
                  pass
-                \s
+                
              expr = A(undefined).user""");
   }
 

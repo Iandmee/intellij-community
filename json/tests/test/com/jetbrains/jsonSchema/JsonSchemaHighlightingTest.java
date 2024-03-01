@@ -617,7 +617,7 @@ public class JsonSchemaHighlightingTest extends JsonSchemaHighlightingTestBase {
         "items":{
             "$ref": "#/definitions/options/items"
           }
-       \s
+       
       }""";
     doTest(schema, "[2, 3 ,4]");
     doTest(schema, "[2, <warning>\"3\"</warning>]");
@@ -996,7 +996,7 @@ public class JsonSchemaHighlightingTest extends JsonSchemaHighlightingTestBase {
     @Language("JSON") String schemaText = FileUtil.loadFile(new File(getTestDataPath() + "/avroSchema.json"));
     doTest(schemaText, """
       <warning descr="One of the following property sets is required: properties 'type' = record, 'fields', 'name', properties 'type' = enum, 'name', 'symbols', properties 'type' = array, 'items', properties 'type' = map, 'values', or properties 'type' = fixed, 'name', 'size'">{
-       \s
+       
       }</warning>""");
   }
 
@@ -1163,7 +1163,7 @@ public class JsonSchemaHighlightingTest extends JsonSchemaHighlightingTestBase {
                                "name": "foo"
                              }],
                              <weak_warning descr="Property 'description-markup' is deprecated: Use top-level property.">"description-markup"</weak_warning>: "html"
-                           }\
+                           }
                          """, "json");
     myFixture.checkHighlighting(true, false, true);
   }

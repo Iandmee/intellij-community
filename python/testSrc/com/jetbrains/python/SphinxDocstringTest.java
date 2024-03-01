@@ -22,10 +22,10 @@ public class SphinxDocstringTest extends PyTestCase {
                                                               :key key1: key1 description
                                                               :keyword key2: key2 description
 
-                                                              :raises Exc1: Exc1 description \s
-                                                              :raise Exc2: Exc2 description\s
-                                                              :except Exc3: Exc3 description\s
-                                                              :exception Exc4: Exc4 description\s""");
+                                                              :raises Exc1: Exc1 description 
+                                                              :raise Exc2: Exc2 description
+                                                              :except Exc3: Exc3 description
+                                                              :exception Exc4: Exc4 description""");
 
     assertSameElements(docstring.getParameters(), "p1", "p2", "p3", "p4");
     assertEquals("p1 description", docstring.getParamDescription("p1"));

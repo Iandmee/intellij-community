@@ -190,7 +190,7 @@ public class Py3TypeTest extends PyTestCase {
           ""\"
           Args:
               x: foo
-          ""\"   \s
+          ""\"   
           expr = x""");
   }
 
@@ -201,7 +201,7 @@ public class Py3TypeTest extends PyTestCase {
           ""\"
           Args:
               x (): foo
-          ""\"   \s
+          ""\"   
           expr = x""");
   }
 

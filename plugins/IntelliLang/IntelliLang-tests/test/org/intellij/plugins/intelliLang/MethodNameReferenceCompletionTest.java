@@ -35,7 +35,7 @@ public class MethodNameReferenceCompletionTest extends LightJavaCodeInsightFixtu
             // ...
           }
         }
-       \s
+       
         interface BlueComponent {}
       }""";
     myFixture.configureByText("MethodName.java", input);
@@ -64,7 +64,7 @@ public class MethodNameReferenceCompletionTest extends LightJavaCodeInsightFixtu
             // ...
           }
         }
-       \s
+       
         interface BlueComponent {}
       }""";
     myFixture.checkResult(result);

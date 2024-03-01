@@ -31,7 +31,7 @@ public class YAMLColorsPage implements ColorSettingsPage {
       description: >
         Sidebar configuration example
       extensions:
-        - &params\s
+        - &params
             auto_run: true
             reload: true
         - *params""";

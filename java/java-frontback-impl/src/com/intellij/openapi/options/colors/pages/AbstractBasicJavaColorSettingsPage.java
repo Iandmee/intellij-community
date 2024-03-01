@@ -167,9 +167,9 @@ public abstract class AbstractBasicJavaColorSettingsPage
             <error>int <localVar>localVar</localVar> = "IntelliJ"</error>; // Error, incompatible types
             <class>System</class>.<static>out</static>.<methodCall>println</methodCall>(<field>anotherString</field> + <inherited_method>toString</inherited_method>() + <localVar>localVar</localVar>);
             long <localVar>time</localVar> = <class>Date</class>.<static_method><deprecated>parse</deprecated></static_method>("1.2.3"); // Method is deprecated
-            int <reassignedLocalVar>reassignedValue</reassignedLocalVar> = this.<warning>staticField</warning>;\s
-            <reassignedLocalVar>reassignedValue</reassignedLocalVar> ++;\s
-            <field>field</field>.<abstract_method>run</abstract_method>();\s
+            int <reassignedLocalVar>reassignedValue</reassignedLocalVar> = this.<warning>staticField</warning>;
+            <reassignedLocalVar>reassignedValue</reassignedLocalVar> ++;
+            <field>field</field>.<abstract_method>run</abstract_method>();
             new <anonymousClass>SomeClass</anonymousClass>() {
               {
                 int <localVar>a</localVar> = <implicitAnonymousParameter>localVar</implicitAnonymousParameter>;

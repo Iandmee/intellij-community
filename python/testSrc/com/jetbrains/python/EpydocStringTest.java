@@ -66,7 +66,7 @@ public class EpydocStringTest extends TestCase {
 
                                                          @param *args: arguments passed to function
                                                          @param **kwargs: keyword arguments passed to C{function}
-                                                        \s
+                                                        
                                                          @return: the return value of the function\
                                                      """);
 
@@ -129,10 +129,10 @@ public class EpydocStringTest extends TestCase {
                                                            @keyword key2: key2 description
                                                            @kwparam key3: key3 description
 
-                                                           @raises Exc1: Exc1 description \s
-                                                           @raise Exc2: Exc2 description\s
-                                                           @except Exc3: Exc3 description\s
-                                                           @exception Exc4: Exc4 description\s""");
+                                                           @raises Exc1: Exc1 description 
+                                                           @raise Exc2: Exc2 description
+                                                           @except Exc3: Exc3 description
+                                                           @exception Exc4: Exc4 description""");
 
     assertSameElements(docstring.getParameters(), "p1", "p2", "p3", "p4");
     assertEquals("p1 description", docstring.getParamDescription("p1"));

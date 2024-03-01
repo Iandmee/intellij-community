@@ -501,7 +501,7 @@ public class JavaLiveTemplateTest extends LiveTemplateTestCase {
             Runnable r = () -> {
                 for (int i = 0; i < arr.length; i++) {
                     int i1 = arr[i];
-                   \s
+                   
                 }
             }
           }
@@ -518,7 +518,7 @@ public class JavaLiveTemplateTest extends LiveTemplateTestCase {
         java.util.List<? extends Integer> list;
             for (int i = 0; i < list.size(); i++) {
                 Integer integer =  list.get(i);
-               \s
+               
             }
         }}""");
   }
@@ -539,7 +539,7 @@ public class JavaLiveTemplateTest extends LiveTemplateTestCase {
         class A { Iterable<String> getCreatedTags() { }
         {
             for (String createdTag : getCreatedTags()) {
-               \s
+               
             }
         }}""");
   }
@@ -582,7 +582,7 @@ public class JavaLiveTemplateTest extends LiveTemplateTestCase {
         class C {
             public static void main(String ...args) {
                 for (String arg : args) {
-                   \s
+                   
                 }
             }
         }""");

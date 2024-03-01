@@ -492,7 +492,7 @@ public class SoftWrapApplianceOnDocumentModificationTest extends AbstractEditorT
     String text =
       """
         class Test {
-            public String s = "this is a long string literal that is expected to be soft-wrapped into multiple visual lines";  \s
+            public String s = "this is a long string literal that is expected to be soft-wrapped into multiple visual lines";  
         }""";
 
     init(30, text, false);

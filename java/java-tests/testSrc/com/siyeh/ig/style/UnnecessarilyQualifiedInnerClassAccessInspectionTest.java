@@ -10,13 +10,13 @@ public class UnnecessarilyQualifiedInnerClassAccessInspectionTest extends LightJ
     doTest("""
              class X {
                /*'Y' is unnecessarily qualified with 'X'*//*_*/X/**//* 1*/./* 2*/Y foo;
-              \s
+              
                class Y{}
              }""");
     checkQuickFix("Remove qualifier", """
       class X {
         /* 2*//* 1*/ Y foo;
-       \s
+       
         class Y{}
       }""");
   }

@@ -205,7 +205,7 @@ public class OptimizeImportsTest extends OptimizeImportsTestCase {
   public void testNoStubPsiMismatchOnRecordInsideImportList2() {
     myFixture.enableInspections(new UnusedImportInspection());
     myFixture.configureByText("a.java", """
-      import java.ut<caret>il.Set;record\s
+      import java.ut<caret>il.Set;record
       import x java.util.Map;
 
       import java.util.Map;

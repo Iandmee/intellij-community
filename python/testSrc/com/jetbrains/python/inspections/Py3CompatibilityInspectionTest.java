@@ -62,7 +62,7 @@ public class Py3CompatibilityInspectionTest extends PyInspectionTestCase {
     doTestByText("""
                    class A:
                      def __or__(self, other) -> int: return 5
-                    \s
+                    
                    expr = A() | A()""");
   }
 

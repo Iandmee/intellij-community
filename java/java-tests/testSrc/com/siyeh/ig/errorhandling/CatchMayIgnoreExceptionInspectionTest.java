@@ -207,9 +207,9 @@ public class CatchMayIgnoreExceptionInspectionTest extends LightJavaInspectionTe
                    throw throwChecked(t);
                  }
                }
-              \s
+              
                native Object foo() throws Exception;
-              \s
+              
                @SuppressWarnings("unchecked")
                private static <T extends Throwable> RuntimeException throwChecked(Throwable t) throws T {
                  throw (T) t;

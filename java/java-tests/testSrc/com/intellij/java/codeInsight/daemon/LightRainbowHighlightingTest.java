@@ -70,7 +70,7 @@ public class LightRainbowHighlightingTest extends LightJavaCodeInsightFixtureTes
       """
         class TestClass {
             /**
-             *\s
+             *
              * @param <rainbow color='ff000002'>param1</rainbow>
              * @param <rainbow color='ff000004'>param2</rainbow>
              * @param <rainbow color='ff000001'>param3</rainbow>

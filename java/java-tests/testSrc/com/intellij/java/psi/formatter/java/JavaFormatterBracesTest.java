@@ -374,7 +374,7 @@ class Test {
                 Runnable a = new Runnable() {
                     @Override
                     public void run() {
-                       \s
+                       
                     }
                 };
             }

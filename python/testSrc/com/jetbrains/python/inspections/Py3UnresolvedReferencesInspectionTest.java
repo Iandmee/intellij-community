@@ -271,7 +271,7 @@ public class Py3UnresolvedReferencesInspectionTest extends PyInspectionTestCase 
 
                    class B:
                        __slots__ = ['y']
-                      \s
+                      
                    def foo(ab: Union[A, B]):
                        print(ab.x)""");
   }

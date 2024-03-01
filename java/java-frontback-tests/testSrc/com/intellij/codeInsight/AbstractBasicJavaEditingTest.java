@@ -88,7 +88,7 @@ public abstract class AbstractBasicJavaEditingTest extends EditingTestBase {
     init("""
            class Test {
                void m() {
-              \s
+             
                <caret>}
            }""", JavaFileType.INSTANCE);
     executeAction("EditorHungryBackSpace");

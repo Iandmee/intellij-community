@@ -22,12 +22,12 @@ public class IndentingBackspaceHandlerVirtualSpaceTest extends LightPlatformCode
   public void testAfterLargeIndent() {
     doTest("""
              class Foo {
-                  \s
+                  
              }""",
            new LogicalPosition(1, 10),
            """
              class Foo {
-                \s
+                
              }""",
            new LogicalPosition(1, 4));
   }
@@ -35,12 +35,12 @@ public class IndentingBackspaceHandlerVirtualSpaceTest extends LightPlatformCode
   public void testAfterProperIndent() {
     doTest("""
              class Foo {
-                \s
+                
              }""",
            new LogicalPosition(1, 10),
            """
              class Foo {
-                \s
+                
              }""",
            new LogicalPosition(1, 4));
   }
@@ -48,12 +48,12 @@ public class IndentingBackspaceHandlerVirtualSpaceTest extends LightPlatformCode
   public void testAfterSmallIndent() {
     doTest("""
              class Foo {
-               \s
+               
              }""",
            new LogicalPosition(1, 10),
            """
              class Foo {
-                \s
+                
              }""",
            new LogicalPosition(1, 4));
   }
@@ -66,7 +66,7 @@ public class IndentingBackspaceHandlerVirtualSpaceTest extends LightPlatformCode
            new LogicalPosition(1, 10),
            """
              class Foo {
-                \s
+                
              }""",
            new LogicalPosition(1, 4));
   }
@@ -74,7 +74,7 @@ public class IndentingBackspaceHandlerVirtualSpaceTest extends LightPlatformCode
   public void testAtIndent() {
     doTest("""
              class Foo {
-               \s
+               
              }""",
            new LogicalPosition(1, 4),
            "class Foo {\n" +
@@ -96,7 +96,7 @@ public class IndentingBackspaceHandlerVirtualSpaceTest extends LightPlatformCode
   public void testBeforeIndent() {
     doTest("""
              class Foo {
-              \s
+              
              }""",
            new LogicalPosition(1, 3),
            "class Foo {\n" +
@@ -113,7 +113,7 @@ public class IndentingBackspaceHandlerVirtualSpaceTest extends LightPlatformCode
            new LogicalPosition(2, 0),
            """
              class Foo {
-                \s
+                
              }""",
            new LogicalPosition(1, 4));
   }

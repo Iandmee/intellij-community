@@ -87,7 +87,7 @@ public final class CustomColorsPage implements ColorSettingsPage, DisplayPriorit
       anotherKeyword3 someString = "SomeString";
       aKeyword4 variable = 123;
       anotherKeyword4 someString = "SomeString \\n\\x  \\& \\g ";
-      /*\s
+      /*
        * Block comment
        */
 

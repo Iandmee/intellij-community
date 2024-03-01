@@ -764,7 +764,7 @@ public class PyUnresolvedReferencesInspectionTest extends PyInspectionTestCase {
                    class SomeClass:
                        def __init__(self):
                            self.one = lambda x: True
-                          \s
+                          
                        def some_method(self):
                            self.one.<warning descr="Cannot find reference 'abc' in 'function'">abc</warning>""");
   }

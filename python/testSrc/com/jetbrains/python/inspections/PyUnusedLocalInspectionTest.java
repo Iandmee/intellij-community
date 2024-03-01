@@ -159,7 +159,7 @@ public class PyUnusedLocalInspectionTest extends PyInspectionTestCase {
                     x = 2
                     g2()
                 print(x) #pass
-           \s
+           
         import contextlib
         from contextlib import suppress
         from unittest import TestCase

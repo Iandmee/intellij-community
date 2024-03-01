@@ -21,7 +21,7 @@ public class CoAuthoredCompletionContributorTest extends LightPlatformCodeInsigh
     myFixture.checkResult("""
                             Test
 
-                            Co-authored-by:\s""");
+                            Co-authored-by:""");
   }
 
   @Test
@@ -31,7 +31,7 @@ public class CoAuthoredCompletionContributorTest extends LightPlatformCodeInsigh
     myFixture.checkResult("""
                             Test
 
-                            Signed-off-by:\s""");
+                            Signed-off-by:""");
   }
 
   @Test

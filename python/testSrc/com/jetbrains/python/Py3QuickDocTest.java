@@ -327,7 +327,7 @@ public class Py3QuickDocTest extends LightMarkedTestCase {
         def len(p_object): # real signature unknown; restored from __doc__
             ""\"
             len(object) -> integer
-           \s
+           
             Return the number of items of a sequence or collection.
             ""\"
             return 0""",

@@ -246,16 +246,16 @@ public class PyDunderSlotsInspectionTest extends PyInspectionTestCase {
       () -> doTestByText("""
                            class A:
                                __slots__ = ['bar']
-                              \s
+                              
                            A().baz = 1
 
 
                            class B:
                                __slots__ = ['bar']
-                              \s
+                              
                            class C(B):
                                __slots__ = ['baz']
-                              \s
+                              
                            C().foo = 1""")
     );
   }

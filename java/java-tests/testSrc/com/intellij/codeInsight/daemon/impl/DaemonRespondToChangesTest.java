@@ -757,7 +757,7 @@ public class DaemonRespondToChangesTest extends DaemonAnalyzerTestCase {
 
   public void testLineMarkersDoNotBlinkOnBackSpaceRightBeforeMethodIdentifier() {
     configureByText(JavaFileType.INSTANCE, """
-      package x;\s
+      package x;
       class  <caret>ToRun{
         public static void main(String[] args) {
         }
@@ -810,7 +810,7 @@ public class DaemonRespondToChangesTest extends DaemonAnalyzerTestCase {
       abstract class ToRun<TTTTTTTTTTTTTTT> implements Comparable<TTTTTTTTTTTTTTT> {
         private ToRun<TTTTTTTTTTTTTTT> delegate;
         <caret>
-       \s
+       
       }""");
 
     assertEmpty(highlightErrors());
@@ -865,7 +865,7 @@ public class DaemonRespondToChangesTest extends DaemonAnalyzerTestCase {
 
   public void testOverrideMethodsHighlightingPersistWhenTypeInsideMethodBody() {
     configureByText(JavaFileType.INSTANCE, """
-      package x;\s
+      package x;
       class ClassA {
           static <T> void sayHello(Class<? extends T> msg) {}
       }
@@ -1522,7 +1522,7 @@ public class DaemonRespondToChangesTest extends DaemonAnalyzerTestCase {
        <caret>
           }};
           <selection>int y = x;</selection>
-      \s
+      
       } }""");
     assertEmpty(highlightErrors());
     PlatformTestUtil.invokeNamedAction(IdeActions.ACTION_EDITOR_COPY);
@@ -2179,9 +2179,9 @@ public class DaemonRespondToChangesTest extends DaemonAnalyzerTestCase {
     runWithReparseDelay(0, () -> {
       @Language("JAVA")
       String text = """
-        class C {\s
+        class C {
           void m() {
-          }\s
+          }
         }""";
       configureByText(JavaFileType.INSTANCE, text);
       EditorTestUtil.buildInitialFoldingsInBackground(myEditor);

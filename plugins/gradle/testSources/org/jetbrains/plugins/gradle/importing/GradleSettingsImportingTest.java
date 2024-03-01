@@ -436,7 +436,7 @@ public class GradleSettingsImportingTest extends GradleSettingsImportingTestCase
                               def f = file("test_output.txt")
                               f.createNewFile()
                               f.text = "Expected file content"
-                          } \s
+                          } 
                         }
                       }""")
         .generate()

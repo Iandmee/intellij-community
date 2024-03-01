@@ -293,7 +293,7 @@ public class PyEditingTest extends PyTestCase {
     runWithDocStringFormat(DocStringFormat.PLAIN, () -> doTestEnter("def foo():\n  \"\"\"<caret>", """
       def foo():
         ""\"
-       \s
+       
         ""\""""));
   }
 
@@ -447,7 +447,7 @@ public class PyEditingTest extends PyTestCase {
                 "    \"bar\")",
                 """
                   print ("foo"
-                        \s
+                        
                       "bar")""");
   }
 
@@ -486,7 +486,7 @@ public class PyEditingTest extends PyTestCase {
                 "     <caret>'')",
                 """
                   a = (''
-                      \s
+                      
                        '')""");
   }
 
@@ -979,11 +979,11 @@ public class PyEditingTest extends PyTestCase {
   // PY-42200
   public void testParenthesizedWithItemsEnterBeforeClosingParenthesis() {
     doTestEnter("""
-                  with (foo(),\s
+                  with (foo(),
                         foo()<caret>):
                        pass""",
                 """
-                  with (foo(),\s
+                  with (foo(),
                         foo()
                         <caret>):
                        pass""");
@@ -1082,7 +1082,7 @@ public class PyEditingTest extends PyTestCase {
         x = a + b + <caret>c + d
         """,
       """
-        x = (a + b +\s
+        x = (a + b +
              c + d)
         """, true);
   }
@@ -1093,7 +1093,7 @@ public class PyEditingTest extends PyTestCase {
         from collections import Hashable, Iterable, <caret>KeysView, Mapping, MutableMapping
         """,
       """
-        from collections import (Hashable, Iterable,\s
+        from collections import (Hashable, Iterable,
                                  KeysView, Mapping, MutableMapping)
         """, true);
   }
@@ -1210,7 +1210,7 @@ public class PyEditingTest extends PyTestCase {
             pass
         """,
       """
-        with (open('foo.txt') as foo,\s
+        with (open('foo.txt') as foo,
               open('bar.txt') as bar):
             pass
         """, true);

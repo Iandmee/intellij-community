@@ -48,7 +48,7 @@ public class KotlinBlockingCallDetectionTest extends JavaCodeInsightFixtureTestC
                                 @NonBlocking
                                 fun nonBlockingFunction() {
                                   Thread.<warning descr="Possibly blocking call in non-blocking context could lead to thread starvation">sleep</warning>(111);
-                                 \s
+                                 
                                   URL("https://example.com")
                                 }""");
 

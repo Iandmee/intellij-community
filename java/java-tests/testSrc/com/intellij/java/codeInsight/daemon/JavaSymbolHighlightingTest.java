@@ -38,7 +38,7 @@ public class JavaSymbolHighlightingTest extends LightDaemonAnalyzerTestCase {
                                 y = 7;     int x = 0;
                                 <text_attr descr="Reassigned local variable">x</text_attr> = 1;
                               }
-                             \s
+                             
                               String loop() {
                                 String <text_attr descr="Reassigned local variable">a</text_attr>;
 

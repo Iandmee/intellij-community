@@ -21,7 +21,7 @@ public class ReplaceWithMutableCollectionIntentionTest extends IPPTestCase {
         import java.util.AbstractCollection;
 
         public abstract class ImmutableCollection<E> extends AbstractCollection<E> implements Serializable {
-         \s
+         
         }""");
     myFixture.addClass(
       """

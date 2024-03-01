@@ -54,7 +54,7 @@ public class PyTypeParameterScopingTest extends PyTestCase {
                              """
                                def func(x):
                                    ""\"
-                                   :type x: T\s
+                                   :type x: T
                                    :rtype: T
                                    ""\"
                                    pass
@@ -97,14 +97,14 @@ public class PyTypeParameterScopingTest extends PyTestCase {
                                class C:
                                    def __init__(self, x):
                                        ""\"
-                                       :type x: T\s
+                                       :type x: T
                                        :rtype: C[T]
                                        ""\"
                                        pass
 
                                    def m(self):
                                        ""\"
-                                       :rtype: T\s
+                                       :rtype: T
                                        ""\"
                                        pass
                                """
@@ -146,7 +146,7 @@ public class PyTypeParameterScopingTest extends PyTestCase {
                                class C:
                                    def __init__(self, x):
                                        ""\"
-                                       :type x: T\s
+                                       :type x: T
                                        :rtype: C[T]
                                        ""\"
                                        pass

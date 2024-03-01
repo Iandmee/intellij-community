@@ -291,7 +291,7 @@ public class KillToWordEndActionTest extends LightPlatformCodeInsightTestCase {
     Object string = getContents();
     assertEquals("""
 
-                                  \s
+                                  
                    """, string);
   }
 
@@ -309,7 +309,7 @@ public class KillToWordEndActionTest extends LightPlatformCodeInsightTestCase {
     checkResultByText("""
                         public class ParentCopy {
                                 public Insets getBorderInsets(
-                                       \s
+                                       
                             }""");
 
     Object string = getContents();

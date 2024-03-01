@@ -305,9 +305,9 @@ public class PySectionBasedDocStringTest extends PyTestCase {
 
             My Section:
                 some user defined section
-           \s
+           
             Parameters:
-                param1:\s
+                param1:
 
             Returns:
         """));

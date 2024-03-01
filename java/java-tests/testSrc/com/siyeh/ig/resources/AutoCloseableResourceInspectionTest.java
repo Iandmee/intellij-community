@@ -301,7 +301,7 @@ public class AutoCloseableResourceInspectionTest extends LightJavaInspectionTest
                private static void example() {
                  consume(() -> new X());
                }
-              \s
+              
                interface Consumer { X use();}
                private static native X getX();
                private static native void consume(Consumer x);
@@ -319,7 +319,7 @@ public class AutoCloseableResourceInspectionTest extends LightJavaInspectionTest
                private static void example() {
                  consume(() -> new <warning descr="'X' used without 'try'-with-resources statement">X</warning>());
                }
-              \s
+              
                interface Runnable { void run();}
                private static native X getX();
                private static native void consume(Runnable x);

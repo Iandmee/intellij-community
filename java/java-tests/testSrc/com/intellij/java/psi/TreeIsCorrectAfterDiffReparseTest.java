@@ -566,7 +566,7 @@ public class TreeIsCorrectAfterDiffReparseTest extends LightJavaCodeInsightTestC
           try {
             return new CalcInfo(acdm, acdm.getAllCalcData(timeSheetIdentifier.getPpEnd(), timeSheetIdentifier.getVersion()), timeSheetIdentifier, parms);
           } catch (Exception e) {
-            throw new InternalApplicationException("Error creating CalcInfo ", e);\s
+            throw new InternalApplicationException("Error creating CalcInfo ", e);
           }
         }
 
@@ -741,7 +741,7 @@ public class TreeIsCorrectAfterDiffReparseTest extends LightJavaCodeInsightTestC
          * @throws PolicyLookupException
          * @throws MultipleRowDbRecException
          * @throws SQLException
-         * @see AssignmentPeriodState#isPeriodAmendable()\s
+         * @see AssignmentPeriodState#isPeriodAmendable()
          * @see Approval_event_type#SYS_AMEND
          * @see Approval_event_type#AMEND
          */

@@ -533,7 +533,7 @@ public class PatchAutoInitTest extends HeavyPlatformTestCase {
                                                           +++ coupleFiles/file1.txt\t(revision )
                                                           @@ -15,7 +15,7 @@
                                                            by new software offerings like Salesforce.com and Android (especially in a world where Google owns a major handset maker).
-                                                          \s
+                                                          
                                                            In some industries, particularly those with a heavy real-world component such as oil and gas,
                                                           -the software revolution is primarily an opportunity for incumbents.
                                                           +the software revolution is primarily an opportunity for incumbents.Unique

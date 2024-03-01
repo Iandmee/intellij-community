@@ -250,7 +250,7 @@ public class SMTRunnerConsoleTest extends BaseSMTRunnerTestCase {
 
                        method1:1
                        method2:2
-                       stderr1\s""",
+                       stderr1""",
                      // std sys
                      "Expected :Actual   :");
 
@@ -261,7 +261,7 @@ public class SMTRunnerConsoleTest extends BaseSMTRunnerTestCase {
                      "stdout1 ",
                      // std err
                      """
-                       stderr1\s
+                       stderr1
                        error msg
                        expected
                        actual
@@ -289,12 +289,12 @@ public class SMTRunnerConsoleTest extends BaseSMTRunnerTestCase {
 
       method1:1
       method2:2
-      stderr1\s""", "");
+      stderr1""", "");
 
     final MockPrinter mockPrinter1 = new MockPrinter();
     mockPrinter1.onNewAvailable(myTest1);
     assertAllOutputs(mockPrinter1, "stdout1 ", """
-      stderr1\s
+      stderr1
       error msg
 
 
@@ -344,7 +344,7 @@ public class SMTRunnerConsoleTest extends BaseSMTRunnerTestCase {
       error msg
       method1:1
       method2:2
-      stderr1\s""", "");
+      stderr1""", "");
     myEventsProcessor.onTestFinished(new TestFinishedEvent("my_test", 1L));
     myTest1.setFinished();
 

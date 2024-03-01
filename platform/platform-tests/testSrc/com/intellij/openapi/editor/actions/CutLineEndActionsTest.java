@@ -37,7 +37,7 @@ public class CutLineEndActionsTest extends LightPlatformCodeInsightTestCase {
     doTest(
       """
         class Test {
-            <caret>  \s
+            <caret>   
             // some comment
         }""",
       """

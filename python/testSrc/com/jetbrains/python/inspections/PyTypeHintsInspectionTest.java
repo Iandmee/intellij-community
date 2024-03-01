@@ -227,7 +227,7 @@ public class PyTypeHintsInspectionTest extends PyInspectionTestCase {
 
                    class F(B[D], Iterable[D]):
                        pass
-                      \s
+                      
                    class G(Iterable[T]):
                        pass""");
   }
@@ -507,7 +507,7 @@ public class PyTypeHintsInspectionTest extends PyInspectionTestCase {
 
                    class A:
                        pass
-                      \s
+                      
                    assert isinstance(A(), <error descr="'TypeAlias' cannot be used with instance and class checks">TypeAlias</error>)
                    assert issubclass(A, <error descr="'TypeAlias' cannot be used with instance and class checks">TypeAlias</error>)
                    B = TypeAlias
@@ -596,7 +596,7 @@ public class PyTypeHintsInspectionTest extends PyInspectionTestCase {
 
                    class A:
                        pass
-                      \s
+                      
                    T = TypeVar("T")
 
                    assert isinstance(A(), Protocol)
@@ -617,7 +617,7 @@ public class PyTypeHintsInspectionTest extends PyInspectionTestCase {
                    class A:
                        pass
 
-                   T = TypeVar("T")   \s
+                   T = TypeVar("T")   
 
                    class D(Generic[T]):
                        pass
@@ -689,22 +689,22 @@ public class PyTypeHintsInspectionTest extends PyInspectionTestCase {
                    def g(h):
                        # type: (<error descr="Generics should be specified through square brackets">Union()</error>) -> None
                        pass
-                      \s
+                      
                    v1 = <error descr="Generics should be specified through square brackets">Union(int, str)</error>
                    v2 = None  # type: <error descr="Generics should be specified through square brackets">Union(int, str)</error>
 
                    U = Union
                    def i(j: <error descr="Generics should be specified through square brackets">U(int, str)</error>):
                        pass
-                      \s
+                      
                    v3 = <error descr="Generics should be specified through square brackets">U(int, str)</error>
 
                    with foo() as bar:  # type: <error descr="Generics should be specified through square brackets">Union(int,str)</error>
                        pass
-                      \s
+                      
                    for x in []:  # type: <error descr="Generics should be specified through square brackets">Union(int,str)</error>
                        pass
-                      \s
+                      
                    A1: TypeAlias = <error descr="Generics should be specified through square brackets">Union(int, str)</error>
                    A2: TypeAlias = '<error descr="Generics should be specified through square brackets">Union(int, str)</error>'
                    A3 = <error descr="Generics should be specified through square brackets">Union(int, str)</error>  # type: TypeAlias
@@ -735,14 +735,14 @@ public class PyTypeHintsInspectionTest extends PyInspectionTestCase {
                    def g(h):
                        # type: (<warning descr="Generics should be specified through square brackets">A()</warning>) -> None
                        pass
-                      \s
+                      
                    v1 = A(int)
                    v2 = None  # type: <warning descr="Generics should be specified through square brackets">A(int)</warning>
 
                    U = A
                    def i(j: <warning descr="Generics should be specified through square brackets">U(int)</warning>):
                        pass
-                      \s
+                      
                    v3 = None  # type: <warning descr="Generics should be specified through square brackets">U(int)</warning>
 
                    A1: TypeAlias = <warning descr="Generics should be specified through square brackets">A(int)</warning>
@@ -816,11 +816,11 @@ public class PyTypeHintsInspectionTest extends PyInspectionTestCase {
         def <warning descr="Types specified both in a type comment and annotation">bar</warning>(a: int) -> int:
             <warning descr="Types specified both in a type comment and annotation"># type: (int) -> int</warning>
             pass
-           \s
+           
         def <warning descr="Types specified both in a type comment and annotation">baz1</warning>(a: int):
             <warning descr="Types specified both in a type comment and annotation"># type: (int) -> int</warning>
             pass
-           \s
+           
         def <warning descr="Types specified both in a type comment and annotation">baz2</warning>(a) -> int:
             <warning descr="Types specified both in a type comment and annotation"># type: (int) -> int</warning>
             pass"""
@@ -844,7 +844,7 @@ public class PyTypeHintsInspectionTest extends PyInspectionTestCase {
                        def egg11(self, a, b):
                            # type: (Bar, str, bool) -> None
                            pass
-                          \s
+                          
                        # self is specified
                        def spam12(self):
                            # type: (A) -> None
@@ -853,7 +853,7 @@ public class PyTypeHintsInspectionTest extends PyInspectionTestCase {
                        def egg12(self, a, b):
                            # type: (A, str, bool) -> None
                            pass
-                          \s
+                          
                        # self is not specified
                        def spam2(self):
                            # type: () -> None
@@ -862,8 +862,8 @@ public class PyTypeHintsInspectionTest extends PyInspectionTestCase {
                        def egg2(self, a, b):
                            # type: (str, bool) -> None
                            pass
-                          \s
-                       # cls is not specified\s
+                          
+                       # cls is not specified
                        @classmethod
                        def spam3(cls):
                            # type: () -> None
@@ -873,8 +873,8 @@ public class PyTypeHintsInspectionTest extends PyInspectionTestCase {
                        def egg3(cls, a, b):
                            # type: (str, bool) -> None
                            pass
-                      \s
-                       # cls is specified   \s
+                      
+                       # cls is specified   
                        @classmethod
                        def spam41(cls):
                            # type: (Type[Bar]) -> None
@@ -884,8 +884,8 @@ public class PyTypeHintsInspectionTest extends PyInspectionTestCase {
                        def egg41(cls, a, b):
                            # type: (Type[Bar], str, bool) -> None
                            pass
-                      \s
-                       # cls is specified   \s
+                      
+                       # cls is specified   
                        @classmethod
                        def spam42(cls):
                            # type: (Type[A]) -> None
@@ -895,7 +895,7 @@ public class PyTypeHintsInspectionTest extends PyInspectionTestCase {
                        def egg42(cls, a, b):
                            # type: (Type[A], str, bool) -> None
                            pass
-                      \s
+                      
                        @staticmethod
                        def spam5():
                            # type: () -> None
@@ -905,7 +905,7 @@ public class PyTypeHintsInspectionTest extends PyInspectionTestCase {
                        def egg5(a, b):
                            # type: (str, bool) -> None
                            pass
-                          \s
+                          
                        def baz(self, a, b, c, d):
                            # type: (...) -> None
                            pass""");
@@ -929,7 +929,7 @@ public class PyTypeHintsInspectionTest extends PyInspectionTestCase {
                        def egg12(self, a, b):
                            <warning descr="Type signature has too few arguments"># type: (Bar) -> None</warning>
                            pass
-                          \s
+                          
                        # self is not specified
                        def spam2(self):
                            <warning descr="The type of self 'int' is not a supertype of its class 'Bar'"># type: (int) -> None</warning>
@@ -938,8 +938,8 @@ public class PyTypeHintsInspectionTest extends PyInspectionTestCase {
                        def egg2(self, a, b):
                            <warning descr="The type of self 'int' is not a supertype of its class 'Bar'"># type: (int, str, bool) -> None</warning>
                            pass
-                          \s
-                       # cls is not specified\s
+                          
+                       # cls is not specified
                        @classmethod
                        def spam3(cls):
                            <warning descr="The type of self 'int' is not a supertype of its class 'Type[Bar]'"># type: (int) -> None</warning>
@@ -949,8 +949,8 @@ public class PyTypeHintsInspectionTest extends PyInspectionTestCase {
                        def egg3(cls, a, b):
                            <warning descr="The type of self 'int' is not a supertype of its class 'Type[Bar]'"># type: (int, str, bool) -> None</warning>
                            pass
-                      \s
-                       # cls is specified   \s
+                      
+                       # cls is specified   
                        @classmethod
                        def spam4(cls):
                            <warning descr="Type signature has too many arguments"># type: (Type[Bar], int) -> None</warning>
@@ -965,7 +965,7 @@ public class PyTypeHintsInspectionTest extends PyInspectionTestCase {
                        def egg42(cls, a, b):
                            <warning descr="Type signature has too few arguments"># type: (Type[Bar]) -> None</warning>
                            pass
-                      \s
+                      
                        @staticmethod
                        def spam5():
                            <warning descr="Type signature has too many arguments"># type: (int) -> None</warning>

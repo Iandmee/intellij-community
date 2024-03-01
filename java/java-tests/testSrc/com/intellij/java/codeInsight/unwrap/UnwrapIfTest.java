@@ -138,7 +138,7 @@ public class UnwrapIfTest extends UnwrapTestCase {
     assertUnwrapped("""
                       if(true) {
                           int i;<caret>
-                      } else\s
+                      } else
                       """,
 
                     "int i;<caret>\n");
@@ -239,7 +239,7 @@ public class UnwrapIfTest extends UnwrapTestCase {
                       {
                           if(true) {
                               int i;
-                          } el<caret>se\s
+                          } el<caret>se
                       }
                       """,
 

@@ -159,7 +159,7 @@ public class UnnecessaryThisInspectionTest extends LightJavaInspectionTestCase {
                  this.yield();
                  /*'this' is unnecessary in this context*/this/**/.yield1();
                }
-              \s
+              
                void yield() {}
                void yield1() {}
              }""");

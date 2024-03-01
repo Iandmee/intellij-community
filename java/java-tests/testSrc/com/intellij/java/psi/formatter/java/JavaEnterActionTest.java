@@ -156,7 +156,7 @@ public class JavaEnterActionTest extends AbstractBasicJavaEnterActionTest {
                  class Foo {
                      void foo() {
                          if (info.myTargetElement != null &&
-                           info.myElementAtPointer != null &&\s
+                           info.myElementAtPointer != null &&
                              <caret>info.myTargetElement != info.myElementAtPointer) {
                          }
                      }
@@ -220,7 +220,7 @@ public class JavaEnterActionTest extends AbstractBasicJavaEnterActionTest {
                """
                  public class Test {
                      public static void main(String[] args) {
-                         try (Reader r1 = null;\s
+                         try (Reader r1 = null;
                               Reader r2 = null) {}
                      }
                  }
@@ -434,7 +434,7 @@ public class JavaEnterActionTest extends AbstractBasicJavaEnterActionTest {
                """
                  class T {
                      void test() {
-                        \s
+                        
                          <caret>//
                      }
                  }
@@ -670,7 +670,7 @@ public class JavaEnterActionTest extends AbstractBasicJavaEnterActionTest {
                """
                  class Foo {
                      void foo() {
-                         for(;;)\s
+                         for(;;)
                          <caret>{
                          foo();}    }
                  }""");
@@ -782,7 +782,7 @@ public class JavaEnterActionTest extends AbstractBasicJavaEnterActionTest {
       """
         abstract class Test {
             /**
-             * @param i  this is my\s
+             * @param i  this is my
              *           <caret>description
              */
              void test(int i) {
@@ -903,16 +903,14 @@ public class JavaEnterActionTest extends AbstractBasicJavaEnterActionTest {
                    abstract class Test {
                      /**<caret>Foo//bar */
                      public abstract void foo();
-                   }\
-                 """,
+                   }                 """,
 
                """
                    abstract class Test {
                      /**
                       * <caret>Foo//bar */
                      public abstract void foo();
-                   }\
-                 """
+                   }                 """
     );
   }
 
@@ -1037,7 +1035,7 @@ public class JavaEnterActionTest extends AbstractBasicJavaEnterActionTest {
       """
         abstract class Test {
             /**
-             * @param i  this is my\s
+             * @param i  this is my
              * <caret>description
              */
              void test(int i) {
@@ -1054,48 +1052,48 @@ public class JavaEnterActionTest extends AbstractBasicJavaEnterActionTest {
                """
                  public class T {
 
-                   @Configurable(order = 25,\s
+                   @Configurable(order = 25,
                                  validator = BigDecimalPercentValidator.class, <caret>)
                    public void run() {
                    }
-                  \s
-                  \s
+                  
+                  
                  }""",
                """
                  public class T {
 
-                   @Configurable(order = 25,\s
-                                 validator = BigDecimalPercentValidator.class,\s
+                   @Configurable(order = 25,
+                                 validator = BigDecimalPercentValidator.class,
                                  <caret>)
                    public void run() {
                    }
-                  \s
-                  \s
+                  
+                  
                  }""");
 
     doTextTest("java",
                """
                  public class T {
 
-                   @Configurable(order = 25,\s
+                   @Configurable(order = 25,
                                  validator = BigDecimalPercentValidator.class, <caret>
                    )
                    public void run() {
                    }
-                  \s
-                  \s
+                  
+                  
                  }""",
                """
                  public class T {
 
-                   @Configurable(order = 25,\s
-                                 validator = BigDecimalPercentValidator.class,\s
+                   @Configurable(order = 25,
+                                 validator = BigDecimalPercentValidator.class,
                                  <caret>
                    )
                    public void run() {
                    }
-                  \s
-                  \s
+                  
+                  
                  }""");
   }
 
@@ -1107,23 +1105,23 @@ public class JavaEnterActionTest extends AbstractBasicJavaEnterActionTest {
                """
                  public class T {
 
-                   @Configurable(order = 25,\s
+                   @Configurable(order = 25,
                                  validator = BigDecimalPercentValidator.class<caret>)
                    public void run() {
                    }
-                  \s
-                  \s
+                  
+                  
                  }""",
                """
                  public class T {
 
-                   @Configurable(order = 25,\s
+                   @Configurable(order = 25,
                                  validator = BigDecimalPercentValidator.class
                    <caret>)
                    public void run() {
                    }
-                  \s
-                  \s
+                  
+                  
                  }""");
   }
 }

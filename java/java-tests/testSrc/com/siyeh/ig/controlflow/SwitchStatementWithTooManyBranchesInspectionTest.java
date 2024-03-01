@@ -39,8 +39,7 @@ public class SwitchStatementWithTooManyBranchesInspectionTest extends LightJavaI
                                default:
                                    break;
                            }
-                       }\
-                   """);
+                       }                   """);
   }
 
   public void testJava12() {
@@ -60,8 +59,7 @@ public class SwitchStatementWithTooManyBranchesInspectionTest extends LightJavaI
                                case 11,12,13 -> {}
                                default -> {}
                            }
-                       }\
-                   """);
+                       }                   """);
   }
 
   public void testJava13Expression() {
@@ -81,8 +79,7 @@ public class SwitchStatementWithTooManyBranchesInspectionTest extends LightJavaI
                                case 11,12,13 -> 0;
                                default -> 0;
                            };
-                       }\
-                   """);
+                       }                   """);
   }
 
   public void testNoWarn() {
@@ -112,8 +109,7 @@ public class SwitchStatementWithTooManyBranchesInspectionTest extends LightJavaI
                                default:
                                    break;
                            }
-                       }\
-                   """);
+                       }                   """);
   }
 
   @Nullable

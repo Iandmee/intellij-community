@@ -330,7 +330,7 @@ final class JavaPredefinedConfigurations {
                                     public void '_InitServletMethod?:init ();
                                     public void '_DestroyServletMethod?:destroy ();
                                     void '_ServiceMethod?:*service (HttpServletRequest '_request, HttpServletResponse '_response);
-                                    void '_SpecificServiceMethod*:do.* (HttpServletRequest '_request2, HttpServletResponse '_response2);\s
+                                    void '_SpecificServiceMethod*:do.* (HttpServletRequest '_request2, HttpServletResponse '_response2);
                                   }""", getJ2EEType(), JavaFileType.INSTANCE, null),
       createLegacyConfiguration(SSRBundle.message("predefined.configuration.filters"), "filters",
                                 """
@@ -347,7 +347,7 @@ final class JavaPredefinedConfigurations {
                                 """
                                   class 'Class implements '_Serializable:*Serializable {
                                     static final long '_VersionField?:serialVersionUID = '_VersionFieldInit?;
-                                    private static final ObjectStreamField[] '_persistentFields?:serialPersistentFields = '_persistentFieldInitial?;\s
+                                    private static final ObjectStreamField[] '_persistentFields?:serialPersistentFields = '_persistentFieldInitial?;
                                     private void '_SerializationWriteHandler?:writeObject (ObjectOutputStream '_stream) throws IOException;
                                     private void '_SerializationReadHandler?:readObject (ObjectInputStream '_stream2) throws IOException, ClassNotFoundException;
                                     Object '_SpecialSerializationReadHandler?:readResolve () throws ObjectStreamException;

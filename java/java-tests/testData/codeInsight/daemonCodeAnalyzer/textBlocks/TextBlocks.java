@@ -9,7 +9,7 @@ class C {
   String s10 = " <error descr="Illegal escape character in string literal">\ </error>";
 
   String valid1 = """
-    \s
+
     """;
 
   String valid2 = """

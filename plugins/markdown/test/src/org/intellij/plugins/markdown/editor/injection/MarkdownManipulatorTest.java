@@ -70,7 +70,7 @@ public class  MarkdownManipulatorTest extends BasePlatformTestCase {
            "\nsingleton_class",
            """
              ```text
-              \s
+              
                singleton_class
                ```""");
   }
@@ -84,7 +84,7 @@ public class  MarkdownManipulatorTest extends BasePlatformTestCase {
            """
              ```text
                singleton_class
-              \s
+              
                ```""");
   }
 
@@ -101,7 +101,7 @@ public class  MarkdownManipulatorTest extends BasePlatformTestCase {
       """
         ```text
             singleton_class
-           \s
+           
             ```""");
   }
 
@@ -123,8 +123,8 @@ public class  MarkdownManipulatorTest extends BasePlatformTestCase {
              * C
                * B\s
                  >  * A\s
-                 >   \s
-                 >  * D \s
+                 >   
+                 >  * D 
                -  >  -    > ```text
                   >       > <caret>$LAST_MATCH_INFO
                   >       > ```
@@ -139,10 +139,10 @@ public class  MarkdownManipulatorTest extends BasePlatformTestCase {
   public void testInQuotesInListNewLineBefore() {
     doTest("""
              * C
-               * B\s
-                 >  * A\s
-                 >   \s
-                 >  * D \s
+               * B
+                 >  * A
+                 >   
+                 >  * D 
                -  >  -    > ```text
                   >       > <caret>$LAST_MATCH_INFO
                   >       > ```
@@ -158,10 +158,10 @@ public class  MarkdownManipulatorTest extends BasePlatformTestCase {
   public void testInQuotesInListNewLineAfter() {
     doTest("""
              * C
-               * B\s
-                 >  * A\s
-                 >   \s
-                 >  * D \s
+               * B
+                 >  * A
+                 >   
+                 >  * D 
                -  >  -    > ```text
                   >       > <caret>$LAST_MATCH_INFO
                   >       > ```

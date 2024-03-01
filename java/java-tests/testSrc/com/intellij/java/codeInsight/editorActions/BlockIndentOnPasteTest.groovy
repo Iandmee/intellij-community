@@ -34,8 +34,7 @@ class Test {
             <caret>
         }
     }
-}\
-'''
+}'''
     
     def toPaste =
 '''\
@@ -52,8 +51,7 @@ class Test {
                foo();
         }
     }
-}\
-'''
+}'''
     doTest(before, toPaste, expected)
   }
 
@@ -63,8 +61,7 @@ class Test {
     void test() {
 <caret>        int a = 100;
         int b = 200;
-    }\
-'''
+    }'''
     
     def toPaste = '''\
     int b = 200;
@@ -76,8 +73,7 @@ class Test {
         int b = 200;
         int a = 100;
         int b = 200;
-    }\
-'''
+    }'''
                                         
     doTest(before, toPaste, expected)
   }
@@ -93,8 +89,7 @@ class Test {
         }
                               <caret>
     }
-}\
-'''
+}'''
 
     def toPaste =
     '''\
@@ -102,8 +97,7 @@ class Test {
             i = 1;
         } else {
             i = 2;
-        }\
-'''
+        }'''
 
     def expected = '''\
 class Test {
@@ -119,8 +113,7 @@ class Test {
             i = 2;
         }
     }
-}\
-'''
+}'''
     doTest(before, toPaste, expected)
   }
   
@@ -132,8 +125,7 @@ class Test {
             <caret>
         }
     }
-}\
-'''
+}'''
 
     def toPaste =
     '''\
@@ -150,8 +142,7 @@ class Test {
                foo();
         }
     }
-}\
-'''
+}'''
     doTest(before, toPaste, expected)
   }
 
@@ -162,8 +153,7 @@ class Test {
         if (true) {
         <caret>}
     }
-}\
-'''
+}'''
 
     def toPaste =
     '''\
@@ -178,8 +168,7 @@ class Test {
             int i = 1;
         }
     }
-}\
-'''
+}'''
     doTest(before, toPaste, expected)
   }
 
@@ -192,8 +181,7 @@ class Test {
 <caret>
      }
     }
-}\
-'''
+}'''
 
     def toPaste =
     '''\
@@ -210,8 +198,7 @@ class Test {
           foo();
      }
     }
-}\
-'''
+}'''
     doTest(before, toPaste, expected)
   }
 
@@ -221,14 +208,12 @@ class Test {
     def toPaste =
     '''\
           class Test {
-          }\
-'''
+          }'''
 
 
     def expected = '''\
 class Test {
-}\
-'''
+}'''
     doTest(before, toPaste, expected)
   }
   
@@ -240,8 +225,7 @@ class Test {
             <caret>
         }
     }
-}\
-'''
+}'''
 
     def toPaste =
     '''\
@@ -260,8 +244,7 @@ class Test {
                foo();
         }
     }
-}\
-'''
+}'''
     doTest(before, toPaste, expected)
   }
 
@@ -273,8 +256,7 @@ class Test {
             <caret>
         }
     }
-}\
-'''
+}'''
 
     def toPaste =
     '''\
@@ -293,8 +275,7 @@ class Test {
                 foo();
         }
     }
-}\
-'''
+}'''
     doTest(before, toPaste, expected)
   }
 
@@ -306,8 +287,7 @@ class Test {
             <caret>
         }
     }
-}\
-'''
+}'''
 
     def toPaste =
     '''\
@@ -326,8 +306,7 @@ class Test {
              foo();
         }
     }
-}\
-'''
+}'''
     doTest(before, toPaste, expected)
   }
 
@@ -338,8 +317,7 @@ class Test {
         if (true) {<caret>
         }
     }
-}\
-'''
+}'''
 
     def toPaste =
     '''\
@@ -359,8 +337,7 @@ class Test {
         foo();
         }
     }
-}\
-'''
+}'''
     doTest(before, toPaste, expected)
   }
 
@@ -383,8 +360,7 @@ class Test {
         if (true) {
         }
     }
-}\
-'''
+}'''
 
 
     def expected = '''\
@@ -400,8 +376,7 @@ class Test {
         if (true) {
         }
     }
-}\
-'''
+}'''
     doTest(before, toPaste, expected)
   }
 
@@ -424,8 +399,7 @@ class Test {
         if (true) {
         }
     }
-}\
-'''
+}'''
 
 
     def expected = '''\
@@ -441,8 +415,7 @@ class Test {
         if (true) {
         }
     }
-}\
-'''
+}'''
     doTest(before, toPaste, expected)
   }
 
@@ -452,8 +425,7 @@ class Test {
     void test() {
         foo(1, <caret>);
     }
-}\
-'''
+}'''
 
     def toPaste1 =
     '''\
@@ -466,8 +438,7 @@ class Test {
         foo(1, calculate(3, 4)
         );
     }
-}\
-'''
+}'''
     doTest(before, toPaste1, expected)
 
     def toPaste2 =
@@ -483,15 +454,13 @@ class Test {
     void test() {
         foo(1);
     }<caret>
-}\
-'''
+}'''
 
     def toPaste1 =
       '''
     void test() {
         foo(1);
-    }\
-'''
+    }'''
 
     def expected1 = '''\
 class Test {
@@ -501,8 +470,7 @@ class Test {
     void test() {
         foo(1);
     }
-}\
-'''
+}'''
     doTest(before, toPaste1, expected1)
 
     def toPaste2 =
@@ -511,8 +479,7 @@ class Test {
 
     void test() {
         foo(1);
-    }\
-'''
+    }'''
 
     def expected2 = '''\
 class Test {
@@ -524,8 +491,7 @@ class Test {
     void test() {
         foo(1);
     }
-}\
-'''
+}'''
     doTest(before, toPaste2, expected2)
   }
 
@@ -536,14 +502,12 @@ class Test {
         if (i > 0) {<caret>
         }
     }
-}\
-'''
+}'''
 
     def toPaste1 =
       '''
     if (i > 2) {
-    }\
-'''
+    }'''
 
     def expected1 = '''\
 class Test {
@@ -553,8 +517,7 @@ class Test {
             }
         }
     }
-}\
-'''
+}'''
     doTest(before, toPaste1, expected1)
 
     def toPaste2 =
@@ -562,8 +525,7 @@ class Test {
 
 
     if (i > 2) {
-    }\
-'''
+    }'''
 
     def expected2 = '''\
 class Test {
@@ -575,8 +537,7 @@ class Test {
             }
         }
     }
-}\
-'''
+}'''
     doTest(before, toPaste2, expected2)
   }
   
@@ -588,8 +549,7 @@ class Test {
                    <caret>
           }
       }
-  }\
-'''
+  }'''
   
       def toPaste = '''
                        test(1);
@@ -605,8 +565,7 @@ class Test {
               test(1);
           }
       }
-  }\
-'''
+  }'''
       doTest(before, toPaste, expected)
     
     

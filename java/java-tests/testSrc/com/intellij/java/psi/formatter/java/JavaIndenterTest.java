@@ -69,7 +69,7 @@ public class JavaIndenterTest extends AbstractJavaFormatterTest {
         class Test {
            // some comment
                 public void doSmth(int[] p) {
-                   \s
+                   
                 }}""");
   }
 

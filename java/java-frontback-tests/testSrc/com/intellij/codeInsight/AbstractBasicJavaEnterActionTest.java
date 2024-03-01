@@ -286,19 +286,19 @@ public abstract class AbstractBasicJavaEnterActionTest extends AbstractEnterActi
     doTextTest("java", """
       class Foo {
           void foo(){
-              switch (foo) {\s
-              case 1:\s
-                  doSomething();<caret>\s
-                  break;\s
+              switch (foo) {
+              case 1: 
+                  doSomething();<caret> 
+                  break; 
         }     }
       }""", """
                  class Foo {
                      void foo(){
-                         switch (foo) {\s
-                         case 1:\s
+                         switch (foo) { 
+                         case 1: 
                              doSomething();
                              <caret>
-                             break;\s
+                             break; 
                    }     }
                  }""");
   }
@@ -311,20 +311,20 @@ public abstract class AbstractBasicJavaEnterActionTest extends AbstractEnterActi
     doTextTest("java", """
                  class Foo {
                      void foo(){
-                         switch (foo) {\s
-                             case 1:\s
-                                 doSomething();<caret>\s
-                                 break;\s
+                         switch (foo) { 
+                             case 1: 
+                                 doSomething();<caret> 
+                                 break; 
                    }     }
                  }""",
                """
                  class Foo {
                      void foo(){
-                         switch (foo) {\s
-                             case 1:\s
+                         switch (foo) { 
+                             case 1: 
                                  doSomething();
                                  <caret>
-                                 break;\s
+                                 break; 
                    }     }
                  }""");
   }
@@ -337,7 +337,7 @@ public abstract class AbstractBasicJavaEnterActionTest extends AbstractEnterActi
               try {
                   System.out.println("Hello");
               }<caret>
-              finally{\s
+              finally{ 
               }
           }
       }""", """
@@ -347,7 +347,7 @@ public abstract class AbstractBasicJavaEnterActionTest extends AbstractEnterActi
                              System.out.println("Hello");
                          }
                          <caret>
-                         finally{\s
+                         finally{ 
                          }
                      }
                  }""");
@@ -398,7 +398,7 @@ public abstract class AbstractBasicJavaEnterActionTest extends AbstractEnterActi
                              public void foo2(){}
                              public void foo3(){}
                              public void foo4(){}
-                            \s
+                             
                              <caret>
                          }
                      }
@@ -556,7 +556,7 @@ public abstract class AbstractBasicJavaEnterActionTest extends AbstractEnterActi
                  public class Test {
                    public void foo(){
                    }
-                       \s
+                        
                    <caret>"""
     );
   }
@@ -568,17 +568,15 @@ public abstract class AbstractBasicJavaEnterActionTest extends AbstractEnterActi
                      /*
                       * <caret>Foo//bar */
                      public abstract void foo();
-                   }\
-                 """,
+                   }                 """,
 
                """
                    abstract class Test {
                      /*
-                      *\s
+                      * 
                       * <caret>Foo//bar */
                      public abstract void foo();
-                   }\
-                 """
+                   }                 """
     );
   }
 
@@ -641,7 +639,7 @@ public abstract class AbstractBasicJavaEnterActionTest extends AbstractEnterActi
                  class Foo {
                      void foo() {
                          try {
-                        \s
+                         
                          } catch () {<caret>
                      }
                  }""",
@@ -649,7 +647,7 @@ public abstract class AbstractBasicJavaEnterActionTest extends AbstractEnterActi
                  class Foo {
                      void foo() {
                          try {
-                        \s
+                         
                          } catch () {
                              <caret>
                          }
@@ -867,7 +865,7 @@ public abstract class AbstractBasicJavaEnterActionTest extends AbstractEnterActi
       """
         abstract class Test {
             /**
-             *\s
+             * 
              * <caret>@param i  this is my description
              */
              void test(int i) {
@@ -948,7 +946,7 @@ public abstract class AbstractBasicJavaEnterActionTest extends AbstractEnterActi
                    public Class[] getInspectionClasses() {
                      return new Class[] { CucumberStepInspection.class,
                                           CucumberMissedExamplesInspection.class,
-                                          CucumberExamplesColonInspection.class,\s
+                                          CucumberExamplesColonInspection.class, 
                                           <caret>
                      };
                    }
@@ -968,7 +966,7 @@ public abstract class AbstractBasicJavaEnterActionTest extends AbstractEnterActi
                    public Class[] getInspectionClasses() {
                      return new Class[] { CucumberStepInspection.class,
                                           CucumberMissedExamplesInspection.class,
-                                          CucumberExamplesColonInspection.class,\s
+                                          CucumberExamplesColonInspection.class, 
                                           <caret>};
                    }
                  }""");
@@ -1064,7 +1062,7 @@ public abstract class AbstractBasicJavaEnterActionTest extends AbstractEnterActi
 
         class Foo {
             void foo() {
-               \s
+                
             <caret>}
         <caret>}""",
 
@@ -1073,8 +1071,8 @@ public abstract class AbstractBasicJavaEnterActionTest extends AbstractEnterActi
 
         class Foo {
             void foo() {
-               \s
-           \s
+                
+            
             <caret>}
 
         <caret>}"""
@@ -1223,7 +1221,7 @@ public abstract class AbstractBasicJavaEnterActionTest extends AbstractEnterActi
                    public int calculateSomething(List<Integer> input){
                      return 2
                      * input.stream().map(i -> {
-                        \s
+                         
                      });
                    }
                  }
@@ -1274,7 +1272,7 @@ public abstract class AbstractBasicJavaEnterActionTest extends AbstractEnterActi
                                default:
                                    break;
                            }
-                  \s
+                   
                        }
                    }""",
                """
@@ -1289,7 +1287,7 @@ public abstract class AbstractBasicJavaEnterActionTest extends AbstractEnterActi
                                default:
                                    break;
                            }
-                  \s
+                   
                        }
                    }""");
   }
@@ -1348,14 +1346,14 @@ public abstract class AbstractBasicJavaEnterActionTest extends AbstractEnterActi
   public void testSCR2124() {
     doTextTest("java", """
                  class Foo {
-                     public final int f() {\s
+                     public final int f() { 
                          A:<caret>
                          int i;
                      }
                  }""",
                """
                  class Foo {
-                     public final int f() {\s
+                     public final int f() { 
                          A:
                          <caret>
                          int i;
@@ -1566,7 +1564,7 @@ public abstract class AbstractBasicJavaEnterActionTest extends AbstractEnterActi
                  class T {
                      void test() {
                          if (true)
-                             while (true)\s
+                             while (true) 
                                  <caret>
                      }
                  }
@@ -1810,7 +1808,7 @@ public abstract class AbstractBasicJavaEnterActionTest extends AbstractEnterActi
         /*
                 System.out.println("Commented");
         */
-               \s
+                
                 <caret>System.out.println("Hello");
             }
         }""");
@@ -1869,7 +1867,7 @@ public abstract class AbstractBasicJavaEnterActionTest extends AbstractEnterActi
         public class Test {
             void foo(String a, String b, String c)
             {
-                if(true)\s
+                if(true) 
                 {}
                 else<caret>{}
             }
@@ -1879,7 +1877,7 @@ public abstract class AbstractBasicJavaEnterActionTest extends AbstractEnterActi
         public class Test {
             void foo(String a, String b, String c)
             {
-                if(true)\s
+                if(true) 
                 {}
                 else
                 <caret>{}
@@ -1951,7 +1949,7 @@ public abstract class AbstractBasicJavaEnterActionTest extends AbstractEnterActi
           void test(int x) {
             if(x > 0) {
             } else if(x == 0) {
-               \s
+                
             }else {
             }
           }

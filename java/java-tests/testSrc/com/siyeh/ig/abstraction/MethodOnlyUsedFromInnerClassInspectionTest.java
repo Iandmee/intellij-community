@@ -13,7 +13,7 @@ public class MethodOnlyUsedFromInnerClassInspectionTest extends LightJavaInspect
     doTest("""
              class X {
                private void /*Method 'foo()'is only used from inner class 'Inner'*/foo/**/() {}
-              \s
+              
                class Inner {
                  void test() {foo();}
                }
@@ -24,13 +24,13 @@ public class MethodOnlyUsedFromInnerClassInspectionTest extends LightJavaInspect
     doTest("""
              class X {
                private int /*Method 'foo()'is only used from an anonymous class derived from 'Inner'*/foo/**/() {return 5;}
-              \s
+              
                void test() {
                  new Inner(1) {
                    int x = foo();
                  };
                }
-              \s
+              
                static class Inner { Inner(int x) {}}
              }""");
   }
@@ -39,13 +39,13 @@ public class MethodOnlyUsedFromInnerClassInspectionTest extends LightJavaInspect
     doTest("""
              class X {
                private int foo() {return 5;}
-              \s
+              
                void test() {
                  new Inner(foo()) {
                    int x = 5;
                  };
                }
-              \s
+              
                static class Inner { Inner(int x) {}}
              }""");
   }
@@ -54,7 +54,7 @@ public class MethodOnlyUsedFromInnerClassInspectionTest extends LightJavaInspect
     doTest("""
              class X {
                private void /*Method 'foo()'is only used from local class 'Local'*/foo/**/() {}
-              \s
+              
                 void x() {
                  class Local {
                    void test() {foo();}
@@ -70,7 +70,7 @@ public class MethodOnlyUsedFromInnerClassInspectionTest extends LightJavaInspect
     doTest("""
              class X {
                private void foo() {}
-              \s
+              
                 void x() {
                  class Local {
                    void test() {foo();}

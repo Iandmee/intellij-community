@@ -76,8 +76,7 @@ public class SuspiciousSystemArraycopyInspectionTest extends LightJavaInspection
                        public void rangesIntersects() {
                            int[] src = new int[] { 1, 2, 3, 4 };
                            System./*Copying to the same array with intersecting ranges*/arraycopy/**/(src, 0, src, 1, 2);
-                       }\
-                   """);
+                       }                   """);
   }
 
   public void testRangesIntersectSometimes() {
@@ -112,8 +111,7 @@ public class SuspiciousSystemArraycopyInspectionTest extends LightJavaInspection
                            assert (a1.length == 4);
                            assert (a2.length == 8);
                            System.arraycopy(a1, 0, a2, 4, a1.length);
-                       }\
-                   """);
+                       }                   """);
   }
 
   public void test248060() {

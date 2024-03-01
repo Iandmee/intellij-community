@@ -240,8 +240,8 @@ public class EditorMultiCaretTest extends AbstractEditorTest {
     executeAction("EditorLineEnd");
     executeAction("EditorPaste");
     checkResultByText("""
-                        one two\s
-                        one two<caret>\s
+                        one two
+                        one two<caret>
                         three four
                         three four<caret>""");
   }
@@ -253,17 +253,17 @@ public class EditorMultiCaretTest extends AbstractEditorTest {
     executeAction("EditorLineEnd");
     executeAction("EditorPaste");
     checkResultByText("""
-                        one two\s
-                        one two<caret>\s
+                        one two
+                        one two<caret>
                         three four
                         three four<caret>""");
   }
 
   public void testCopyPasteFromEmptySelectionMultipleCaretsAtLineStart() {
     initText("""
-               \tone two\s
-                hi<caret>\s
-               \tthree four\s""");
+               \tone two
+                hi<caret>
+               \tthree four""");
     int tabSize = getEditor().getSettings().getTabSize(getProject());
     getEditor().getSettings().setCaretInsideTabs(true);
     executeAction("EditorCopy");
@@ -276,21 +276,21 @@ public class EditorMultiCaretTest extends AbstractEditorTest {
     getEditor().getCaretModel().addCaret(new VisualPosition(2,1));
     getEditor().getCaretModel().addCaret(new VisualPosition(2, tabSize));
     checkResultByText("""
-                        <caret><caret>\t<caret>one two\s
-                        <caret> hi\s
-                        <caret><caret>\t<caret>three four\s""");
+                        <caret><caret>\t<caret>one two
+                        <caret> hi
+                        <caret><caret>\t<caret>three four""");
     executeAction("EditorPaste");
     checkResultByText("""
-                         hi\s
-                         hi\s
-                         hi\s
-                        <caret><caret>\t<caret>one two\s
-                         hi\s
-                        <caret> hi\s
-                         hi\s
-                         hi\s
-                         hi\s
-                        <caret><caret>\t<caret>three four\s""");
+                         hi
+                         hi
+                         hi
+                        <caret><caret>\t<caret>one two
+                         hi
+                        <caret> hi
+                         hi
+                         hi
+                         hi
+                        <caret><caret>\t<caret>three four""");
   }
 
   public void testCutAndPaste() {
@@ -305,92 +305,92 @@ public class EditorMultiCaretTest extends AbstractEditorTest {
 
   public void testCutFromEmptySelectionAndPasteWithCaretAtLineEnd() {
     initText("""
-               <caret>one\s
-               two\s
-               th<caret>ree\s
-               four\s""");
+               <caret>one
+               two
+               th<caret>ree
+               four""");
     executeAction("EditorCut");
     checkResultByText("<caret>two \n" +
                       "<caret>four ");
     executeAction("EditorLineEnd");
     executeAction("EditorPaste");
     checkResultByText("""
-                        one\s
-                        two<caret>\s
-                        three\s
-                        four<caret>\s""");
+                        one
+                        two<caret>
+                        three
+                        four<caret>""");
   }
 
   public void testCutFromEmptySelectionAndPasteWithCaretAtLineStart() {
     initText("""
-               <caret>one\s
-               two\s
-               th<caret>ree\s
-               four\s""");
+               <caret>one
+               two
+               th<caret>ree
+               four """);
     executeAction("EditorCut");
     checkResultByText("<caret>two \n" +
                       "<caret>four ");
     executeAction("EditorPaste");
     checkResultByText("""
-                        one\s
-                        <caret>two\s
-                        three\s
-                        <caret>four\s""");
+                        one 
+                        <caret>two 
+                        three 
+                        <caret>four """);
   }
 
   public void testCutFromEmptySelectionAndPasteWithFewerCaret() {
     initText("""
-               <caret>one\s
-               two\s
-               th<caret>ree\s
-               four<caret>\s""");
+               <caret>one 
+               two 
+               th<caret>ree 
+               four<caret> """);
     executeAction("EditorCut");
     checkResultByText("<caret>two \n" +
                       "<caret>");
     executeAction("EditorLineEnd");
     executeAction("EditorPaste");
     checkResultByText("""
-                        one\s
-                        two<caret>\s
-                        three\s
+                        one 
+                        two<caret> 
+                        three 
                         <caret>""");
   }
 
   public void testCutFromEmptySelectionAndPasteWithMultipleCaretsOnSingleLine() {
     initText("""
-               <caret>one\s
-               two\s
-               th<caret>ree\s
-               four<caret>\s""");
+               <caret>one 
+               two 
+               th<caret>ree 
+               four<caret> """);
     executeAction("EditorCut");
     checkResultByText("<caret>two \n" +
                       "<caret>");
     getEditor().getCaretModel().addCaret(new VisualPosition(0,2));
     executeAction("EditorPaste");
     checkResultByText("""
-                        one\s
-                        three\s
-                        <caret>tw<caret>o\s
-                        four\s
+                        one 
+                        three 
+                        <caret>tw<caret>o 
+                        four 
                         <caret>""");
   }
 
   public void testCutFromEmptySelectionAndPasteWithMultipleCaretsOnSingleLineAndLineStart() {
     initText("""
-               <caret>one\s
-               two\s
-               th<caret>ree\s
-               four<caret>\s""");
+               <caret>one 
+               two 
+               th<caret>ree 
+               four<caret> """);
     executeAction("EditorCut");
     checkResultByText("<caret>two \n" +
                       "<caret>");
     initText("<caret>t<caret>w<caret>o \n");
     executeAction("EditorPaste");
     checkResultByText("""
-                        one\s
-                        three\s
-                        four\s
-                        <caret>t<caret>w<caret>o\s
+                        one 
+                        three 
+                        four 
+                        <caret>t<caret>w<caret>o 
                         """);
   }
 
@@ -407,17 +407,17 @@ public class EditorMultiCaretTest extends AbstractEditorTest {
 
   public void testCutAndPasteMultiline() {
     initText("""
-               one <selection>two\s
-               three<caret></selection> four\s
-               five <selection>six\s
+               one <selection>two 
+               three<caret></selection> four 
+               five <selection>six 
                seven<caret></selection> eight""");
     executeAction("EditorCut");
     executeAction("EditorLineEnd");
     executeAction("EditorPaste");
     checkResultByText("""
-                        one  fourtwo\s
-                        three<caret>\s
-                        five  eightsix\s
+                        one  fourtwo 
+                        three<caret> 
+                        five  eightsix 
                         seven<caret>""");
   }
 

@@ -152,7 +152,7 @@ public class JavaFormatterMultilineMethodCallParamsTest extends AbstractJavaForm
             return Boo.combine(Boo.p1(),
                                Boo.p2());
           }
-         \s
+         
           private boolean example2() {
             return IntStream.range(0, 4).allMatch(Boo.combine(Boo.p1(),
                                                               Boo.p2()));

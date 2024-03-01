@@ -599,7 +599,7 @@ public class JavaLanguageCodeStyleSettingsProvider extends LanguageCodeStyleSett
             }
           }
           while (true);
-         \s
+         
           switch (o) {
             case Rec(String s, int i) r -> {}
           }
@@ -659,18 +659,18 @@ public class JavaLanguageCodeStyleSettingsProvider extends LanguageCodeStyleSett
           }
           do {
               x--;
-          } while (x > 10);\s
+          } while (x > 10);
           try (MyResource r1 = getResource();
             MyResource r2 = null) {
             doSomething();
           }
           Runnable r = () -> {};
         }
-          public static void test()\s
-              throws Exception {\s
-              foo.foo().bar("arg1",\s
-                            "arg2");\s
-              new Object() {};    }\s
+          public static void test()
+              throws Exception {
+              foo.foo().bar("arg1",
+                            "arg2");
+              new Object() {};    }
           class TestInnerClass {}
           interface TestInnerInterface {}
       }

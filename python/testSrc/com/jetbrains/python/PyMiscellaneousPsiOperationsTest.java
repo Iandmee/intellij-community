@@ -72,7 +72,7 @@ public class PyMiscellaneousPsiOperationsTest extends PyTestCase {
 
                                         # comment
                                         # comment
-                                        def func():\s
+                                        def func():
                                             pass""");
     assertSize(2, blocks);
     assertSize(1, blocks.get(0));
@@ -84,7 +84,7 @@ public class PyMiscellaneousPsiOperationsTest extends PyTestCase {
                                         # comment
                                         # comment
 
-                                        def func():\s
+                                        def func():
                                             pass""");
     assertSize(3, blocks);
     assertSize(1, blocks.get(0));
@@ -99,7 +99,7 @@ public class PyMiscellaneousPsiOperationsTest extends PyTestCase {
                                         # comment
                                         x = 42
 
-                                        def func():\s
+                                        def func():
                                             pass""");
     assertSize(0, blocks);
 
@@ -108,7 +108,7 @@ public class PyMiscellaneousPsiOperationsTest extends PyTestCase {
                                         x = 42
 
                                         # comment
-                                        def func():\s
+                                        def func():
                                             pass""");
     assertSize(1, blocks);
     assertSize(1, blocks.get(0));

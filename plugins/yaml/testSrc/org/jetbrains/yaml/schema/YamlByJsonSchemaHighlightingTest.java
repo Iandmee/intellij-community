@@ -1007,8 +1007,8 @@ public class YamlByJsonSchemaHighlightingTest extends JsonSchemaHighlightingTest
       alerting:
         alertmanagers:
         - static_configs:
-          - targets: <warning>1</warning> \s
-            # - alertmanager:9093 \s
+          - targets: <warning>1</warning> 
+            # - alertmanager:9093 
 
       rule_files:
         # - "first_rules.yml"

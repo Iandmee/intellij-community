@@ -42,7 +42,7 @@ public class TasksExecutionSettingsBuilder {
   @Language("Groovy")
   private static final String FORCE_COMPILE_TASKS_INIT_SCRIPT_TEMPLATE = """
     projectsEvaluated {\s
-      rootProject.findProject('%s')?.tasks?.withType(AbstractCompile) { \s
+      rootProject.findProject('%s')?.tasks?.withType(AbstractCompile) { 
         outputs.upToDateWhen { false }\s
       }\s
     }

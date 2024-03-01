@@ -256,7 +256,7 @@ public class AccessCanBeTightenedInspectionTest extends LightJavaInspectionTestC
       }
       """);
     addJavaFile("x/C.java", """
-      package x;\s
+      package x;
       <warning descr="Access can be package-private">public</warning> class C {
       }""");
     myFixture.configureByFiles("x/C.java", "x/Sub.java");
@@ -328,13 +328,13 @@ public class AccessCanBeTightenedInspectionTest extends LightJavaInspectionTestC
 
                  void x(Inner2 inner) {}
                  class Inner2 {}
-                \s
+                
                  Inner3 field;
                  class Inner3 {}
-                \s
+                
                  private Inner4 field2;
                  class /*Access can be 'private'*/Inner4/**/ {}
-                \s
+                
                  private void y(Inner5 i) {}
                  class /*Access can be 'private'*/Inner5/**/ {}}""");
   }

@@ -618,7 +618,7 @@ public class PyFinalInspectionTest extends PyInspectionTestCase {
                                    <warning descr="'Final' could not be used inside a loop">x</warning>: Final[int] = 1
                            while undefined:
                                <warning descr="'Final' could not be used inside a loop">y</warning>: Final[str] = '1'
-                              \s
+                              
                            def foo():
                                for i in undefined:
                                    if undefined:
@@ -655,12 +655,12 @@ public class PyFinalInspectionTest extends PyInspectionTestCase {
                        @abstractmethod
                        def <warning descr="'Final' class could not contain abstract methods">method</warning>(self):
                            pass
-                          \s
+                          
                    class B(ABC):
                        @final
                        def method(self):
                            pass
-                          \s
+                          
                    class C(ABC):
                        @final
                        @abstractmethod

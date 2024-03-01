@@ -188,14 +188,14 @@ public class EditorActionTest extends AbstractEditorTest {
     initText("""
                A mad boxer shot
                a quick<selection>, gloved jab
-               to the jaw of<caret></selection> his\s
+               to the jaw of<caret></selection> his 
                dizzy opponent.
                """);
     up();
     checkResultByText("""
                         A mad b<caret>oxer shot
                         a quick, gloved jab
-                        to the jaw of his\s
+                        to the jaw of his 
                         dizzy opponent.
                         """);
   }
@@ -204,14 +204,14 @@ public class EditorActionTest extends AbstractEditorTest {
     initText("""
                A mad boxer shot
                a quick<selection>, gloved<caret> jab
-               to the jaw of</selection> his\s
+               to the jaw of</selection> his 
                dizzy opponent.
                """);
     up();
     checkResultByText("""
                         A mad b<caret>oxer shot
                         a quick, gloved jab
-                        to the jaw of his\s
+                        to the jaw of his 
                         dizzy opponent.
                         """);
   }
@@ -220,14 +220,14 @@ public class EditorActionTest extends AbstractEditorTest {
     initText("""
                A mad boxer shot
                a quick<selection><caret>, gloved jab
-               to the jaw of</selection> his\s
+               to the jaw of</selection> his 
                dizzy opponent.
                """);
     down();
     checkResultByText("""
                         A mad boxer shot
                         a quick, gloved jab
-                        to the jaw of his\s
+                        to the jaw of his 
                         dizzy opponen<caret>t.
                         """);
   }
@@ -236,14 +236,14 @@ public class EditorActionTest extends AbstractEditorTest {
     initText("""
                A mad boxer shot
                a quick<selection>, gloved<caret> jab
-               to the jaw of</selection> his\s
+               to the jaw of</selection> his 
                dizzy opponent.
                """);
     down();
     checkResultByText("""
                         A mad boxer shot
                         a quick, gloved jab
-                        to the jaw of his\s
+                        to the jaw of his 
                         dizzy opponen<caret>t.
                         """);
   }

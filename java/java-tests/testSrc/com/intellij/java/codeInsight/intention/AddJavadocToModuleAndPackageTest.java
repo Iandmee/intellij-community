@@ -17,7 +17,7 @@ public class AddJavadocToModuleAndPackageTest extends LightJavaCodeInsightFixtur
     myFixture.launchAction(myFixture.findSingleIntention("Add Javadoc"));
     myFixture.checkResult("""
                             /**
-                             *\s
+                             *
                              */
                             package org.some.awesome;""");
   }
@@ -27,7 +27,7 @@ public class AddJavadocToModuleAndPackageTest extends LightJavaCodeInsightFixtur
     myFixture.launchAction(myFixture.findSingleIntention("Add Javadoc"));
     myFixture.checkResult("""
                             /**
-                             *\s
+                             *
                              */
                             module org.some.awesome{}""");
   }

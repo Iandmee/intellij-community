@@ -193,7 +193,7 @@ public class EnumSwitchStatementWhichMissesCasesInspectionTest extends LightJava
                  /*'switch' statement on enum type 'E' misses case 'C'*/switch/**/(e) {
                    case A, B:break;
                  }
-                \s
+                
                }
              }""");
   }

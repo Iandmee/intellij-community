@@ -193,13 +193,13 @@ public class StructuralReplaceTest extends StructuralReplaceTestCase {
           parentNode.insert(compositeNode, i);
           if (asyncMode) {
              myTreeModel.nodesWereInserted(parentNode,new int[] {i} );
-          }\
+          }
       """;
     String str11 = """
           '_parentNode.insert('_newNode, '_i);
           if (asyncMode) {
              myTreeModel.nodesWereInserted('_parentNode,new int[] {'_i} );
-          }\
+          }
       """;
     String str12 = "addChild($parentNode$,$newNode$, $i$);";
     String expectedResult5 = "    addChild(parentNode,compositeNode, i);";
@@ -293,11 +293,11 @@ public class StructuralReplaceTest extends StructuralReplaceTestCase {
     assertEquals("replace with assert", expectedResult13, replace(s34, s35, s36));
 
     String s37 = """
-      try {\s
+      try {
         ParamChecker.isTrue(1==1, "!!!");
-       \s
+       
         // comment we want to leave
-       \s
+       
         ParamChecker.isTrue(2==2, "!!!");
       } catch(Exception ex) {}""";
     String s38 = """
@@ -308,9 +308,9 @@ public class StructuralReplaceTest extends StructuralReplaceTestCase {
 
     String expectedResult14 = """
       ParamChecker.isTrue(1==1, "!!!");
-       \s
+       
         // comment we want to leave
-       \s
+       
         ParamChecker.isTrue(2==2, "!!!");""";
     assertEquals("remove try with comments inside", expectedResult14, replace(s37, s38, s39));
 
@@ -862,7 +862,7 @@ public class StructuralReplaceTest extends StructuralReplaceTestCase {
           }
           finally {
             PsiLock.LOCK.release();
-          }\
+          }
       """;
     String s13_2 = """
           PsiLock.LOCK.acquire();
@@ -871,7 +871,7 @@ public class StructuralReplaceTest extends StructuralReplaceTestCase {
           }
           finally {
             PsiLock.LOCK.release();
-          }\
+          }
       """;
     String s13_3 = """
           PsiLock.LOCK.acquire();
@@ -882,7 +882,7 @@ public class StructuralReplaceTest extends StructuralReplaceTestCase {
           }
           finally {
             PsiLock.LOCK.release();
-          }\
+          }
       """;
     String s14 = """
           PsiLock.LOCK.acquire();
@@ -891,7 +891,7 @@ public class StructuralReplaceTest extends StructuralReplaceTestCase {
           }
           finally {
             PsiLock.LOCK.release();
-          }\
+          }
       """;
     String s15 = """
       synchronized(PsiLock.LOCK) {
@@ -1281,7 +1281,7 @@ public class StructuralReplaceTest extends StructuralReplaceTestCase {
        */
       public interface X {
           public static final String HEADER = Headers.HEADER;
-         \s
+         
       }""";
 
     assertEquals("Replacing interface with interface, saving comments properly", expectedResult13, replace(s34, s35, s36, true));
@@ -1688,7 +1688,7 @@ public class StructuralReplaceTest extends StructuralReplaceTestCase {
       }""";
     String expectedResult15 = """
       class A {
-       \s
+       
         /* special comment*/
         private List<String> a = buildaMap();
         private static List<String> buildaMap() {
@@ -1696,7 +1696,7 @@ public class StructuralReplaceTest extends StructuralReplaceTestCase {
           int a = 1;
           return a;
         }
-       \s
+       
       }""";
 
     assertEquals("Preserving var modifiers and generic information in type during replacement",
@@ -2221,7 +2221,7 @@ public class StructuralReplaceTest extends StructuralReplaceTestCase {
       try {
        '_statement*;
       } finally {
-       \s
+       
       }""";
     String replacement = "$statement$;";
     String expected = """
@@ -2295,7 +2295,7 @@ public class StructuralReplaceTest extends StructuralReplaceTestCase {
           void $m$($T$ $p$) {
               System.out.println();
               $st$;
-          }\
+          }
       """;
     String expected5 = """
       class X {
@@ -2405,7 +2405,7 @@ public class StructuralReplaceTest extends StructuralReplaceTestCase {
       import java.io.Externalizable;
       import java.io.Serializable;
       abstract class MyClass implements Serializable, Externalizable {
-         \s
+         
       }""";
 
     assertEquals(expectedResult, replace(source, search, replace, true));

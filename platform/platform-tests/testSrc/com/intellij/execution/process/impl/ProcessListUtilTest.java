@@ -174,14 +174,14 @@ public class ProcessListUtilTest extends TestCase {
       """
            PID PPID S USER    COMMAND
 
-                                  \s
+                                  
         """
     ));
     assertEmpty(ProcessListUtil.parseMacOutput(
       """
            PID PPID S USER    COMMAND
 
-                                  \s
+                                  
         """,
       """
            PID PPID STAT USER    COMMAND
@@ -194,13 +194,13 @@ public class ProcessListUtilTest extends TestCase {
   public void testWindows_WMIC() {
     List<ProcessInfo> infos = ProcessListUtil.parseWMICOutput(
       """
-        Caption                   CommandLine                                            ExecutablePath                                ParentProcessId                          ProcessId \s
-        smss.exe                                                                                                                       0                                        304       \s
-        sihost.exe                sihost.exe                                                                                           304                                      3052      \s
-        taskhostw.exe             taskhostw.exe {222A245B-E637-4AE9-A93F-A59CA119A75E}                                                 0                                        3068      \s
-        explorer.exe              C:\\WINDOWS\\Explorer.EXE                                C:\\WINDOWS\\Explorer.EXE                       3068                                     3164      \s
-        TPAutoConnect.exe         TPAutoConnect.exe -q -i vmware -a COM1 -F 30                                                         3164                                     3336      \s
-        conhost.exe               \\??\\C:\\WINDOWS\\system32\\conhost.exe 0x4                \\??\\C:\\WINDOWS\\system32\\conhost.exe           0                                        3348      \s
+        Caption                   CommandLine                                            ExecutablePath                                ParentProcessId                          ProcessId 
+        smss.exe                                                                                                                       0                                        304       
+        sihost.exe                sihost.exe                                                                                           304                                      3052      
+        taskhostw.exe             taskhostw.exe {222A245B-E637-4AE9-A93F-A59CA119A75E}                                                 0                                        3068      
+        explorer.exe              C:\\WINDOWS\\Explorer.EXE                                C:\\WINDOWS\\Explorer.EXE                       3068                                     3164      
+        TPAutoConnect.exe         TPAutoConnect.exe -q -i vmware -a COM1 -F 30                                                         3164                                     3336      
+        conhost.exe               \\??\\C:\\WINDOWS\\system32\\conhost.exe 0x4                \\??\\C:\\WINDOWS\\system32\\conhost.exe           0                                        3348      
         """,
       Map.of(
         304L, "user1",
@@ -221,10 +221,10 @@ public class ProcessListUtilTest extends TestCase {
   public void testOnWindows_WMIC_DoNotIncludeSystemIdleProcess() {
     List<ProcessInfo> infos = ProcessListUtil.parseWMICOutput(
       """
-        Caption                   CommandLine                     ExecutablePath                       ParentProcessId                     ProcessId \s
-        System Idle Process                                                                            -1                                  0         \s
-        System                                                                                         0                                   4         \s
-        smss.exe                                                                                       0                                   304       \s
+        Caption                   CommandLine                     ExecutablePath                       ParentProcessId                     ProcessId 
+        System Idle Process                                                                            -1                                  0         
+        System                                                                                         0                                   4         
+        smss.exe                                                                                       0                                   304       
         """,
       Collections.emptyMap(), null);
     assertOrderedEquals(infos,
@@ -245,18 +245,18 @@ public class ProcessListUtilTest extends TestCase {
 
     assertNull(ProcessListUtil.parseWMICOutput(
       """
-        Caption                   XXX                ExecutablePath                                    ProcessId \s
-        smss.exe                                                                                       304       \s
+        Caption                   XXX                ExecutablePath                                    ProcessId 
+        smss.exe                                                                                       304       
         """, Collections.emptyMap(), null));
     assertNull(ProcessListUtil.parseWMICOutput(
       """
-        Caption                   CommandLine               ExecutablePath                             XXX \s
-        smss.exe                                                                                       304       \s
+        Caption                   CommandLine               ExecutablePath                             XXX 
+        smss.exe                                                                                       304       
         """, Collections.emptyMap(), null));
     assertEmpty(ProcessListUtil.parseWMICOutput(
       """
-        Caption                   CommandLine               ExecutablePath                         ParentProcessId                         ProcessId \s
-                                                                                                                 \s
+        Caption                   CommandLine               ExecutablePath                         ParentProcessId                         ProcessId 
+                                                                                                                 
         """, Collections.emptyMap(), null));
   }
 
@@ -361,13 +361,13 @@ public class ProcessListUtilTest extends TestCase {
 
   public void testWMICOwnership() {
     String output = """
-      Caption                   CommandLine                                            ExecutablePath                                ParentProcessId                          ProcessId \s
-      smss.exe                                                                                                                       0                                        304       \s
-      sihost.exe                sihost.exe                                                                                           304                                      3052      \s
-      taskhostw.exe             taskhostw.exe {222A245B-E637-4AE9-A93F-A59CA119A75E}                                                 0                                        3068      \s
-      explorer.exe              C:\\WINDOWS\\Explorer.EXE                                C:\\WINDOWS\\Explorer.EXE                       3068                                     3164      \s
-      TPAutoConnect.exe         TPAutoConnect.exe -q -i vmware -a COM1 -F 30                                                         3164                                     3336      \s
-      conhost.exe               \\??\\C:\\WINDOWS\\system32\\conhost.exe 0x4                \\??\\C:\\WINDOWS\\system32\\conhost.exe           0                                        3348      \s
+      Caption                   CommandLine                                            ExecutablePath                                ParentProcessId                          ProcessId 
+      smss.exe                                                                                                                       0                                        304       
+      sihost.exe                sihost.exe                                                                                           304                                      3052      
+      taskhostw.exe             taskhostw.exe {222A245B-E637-4AE9-A93F-A59CA119A75E}                                                 0                                        3068      
+      explorer.exe              C:\\WINDOWS\\Explorer.EXE                                C:\\WINDOWS\\Explorer.EXE                       3068                                     3164      
+      TPAutoConnect.exe         TPAutoConnect.exe -q -i vmware -a COM1 -F 30                                                         3164                                     3336      
+      conhost.exe               \\??\\C:\\WINDOWS\\system32\\conhost.exe 0x4                \\??\\C:\\WINDOWS\\system32\\conhost.exe           0                                        3348      
       """;
     Map<Long, String> processOwners = Map.of(
       304L, "user1",

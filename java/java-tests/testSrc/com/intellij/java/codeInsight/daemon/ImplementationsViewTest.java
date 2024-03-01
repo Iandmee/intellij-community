@@ -56,8 +56,7 @@ public class ImplementationsViewTest extends LightJavaCodeInsightFixtureTestCase
                        @Override
                        public String toString() {
                            return "text";
-                       }\
-                   """, newText);
+                       }                   """, newText);
   }
 
   public void testFromEditor() {
@@ -89,8 +88,7 @@ public class ImplementationsViewTest extends LightJavaCodeInsightFixtureTestCase
                        @Override
                        public String toString() {
                            return "text";
-                       }\
-                   """, newText);
+                       }                   """, newText);
   }
 
   private static Collection<PsiElement> getClassImplementations(final PsiClass psiClass) {
@@ -130,7 +128,7 @@ public class ImplementationsViewTest extends LightJavaCodeInsightFixtureTestCase
                   return false;
               }
           }
-         \s
+         
       }""";
     myFixture.configureByText("a.java", text);
     PsiClass psiClass =
@@ -281,7 +279,7 @@ public class ImplementationsViewTest extends LightJavaCodeInsightFixtureTestCase
                   return false;
               }
           }
-         \s
+         
       }""";
     myFixture.configureByText("a.java", text);
       PsiMethod psiMethod =

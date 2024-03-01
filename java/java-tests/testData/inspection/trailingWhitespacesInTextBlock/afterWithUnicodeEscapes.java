@@ -3,7 +3,7 @@
 class Foo {
   void test() {
     String colors = """
-      red\040\t 	\s
+      red\040\t 	
       green
 """;
   }

@@ -44,7 +44,7 @@ public class FindFunctionalInterfaceTest extends LightJavaCodeInsightFixtureTest
   public void testVarargPosition() {
     myFixture.addClass("""
 
-                         class A { \s
+                         class A { 
                            <T> void foo(T... r) {}
                            void bar(J i){foo(i, i, () -> {});}
                          }""");

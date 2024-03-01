@@ -74,9 +74,9 @@ public class JavaTextBlockIndentGuideTest extends BaseIndentGuideTest {
         class Test {
           void m() {
           String textBlock = ""\"
-                             |   \s
-                             |   \s
-                             |   \s
+                             |   
+                             |   
+                             |   
                              ""\";
           }
         }

@@ -74,12 +74,12 @@ public class PyIndentTest extends PyTestCase {
 
   public void testAlignInListOnceMore() {  // PY-2407
     doTest("""
-             for id in ["SEARCH_RESULT_ATTRIBUTES",\s
-                        "WRITE_SEARCH_RESULT_ATTRIBUTES",\s
+             for id in ["SEARCH_RESULT_ATTRIBUTES",
+                        "WRITE_SEARCH_RESULT_ATTRIBUTES",
                         "IDENTIFIER_UNDER_CARET_ATTRIBUTES",<caret>]:""",
            """
-             for id in ["SEARCH_RESULT_ATTRIBUTES",\s
-                        "WRITE_SEARCH_RESULT_ATTRIBUTES",\s
+             for id in ["SEARCH_RESULT_ATTRIBUTES",
+                        "WRITE_SEARCH_RESULT_ATTRIBUTES",
                         "IDENTIFIER_UNDER_CARET_ATTRIBUTES",
                         <caret>]:""");
   }
@@ -105,7 +105,7 @@ public class PyIndentTest extends PyTestCase {
              }""",
            """
              some_dict = {
-                 'key':\s
+                 'key':
                      <caret>
              }""");
   }
@@ -117,7 +117,7 @@ public class PyIndentTest extends PyTestCase {
              }""",
            """
              some_dict = {
-                 'key':\s
+                 'key':
                      <caret>''
              }""");
   }

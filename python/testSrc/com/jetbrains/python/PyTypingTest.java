@@ -689,7 +689,7 @@ public class PyTypingTest extends PyTestCase {
     doTest("(x: Any, y: Any, z: Any) -> int",
            """
              def f(x, y=42, z='foo'):
-                 # type: (...) -> int\s
+                 # type: (...) -> int
                  pass
 
              expr = f""");
@@ -766,7 +766,7 @@ public class PyTypingTest extends PyTestCase {
   public void testFunctionTypeCommentWithParamTypeComment() {
     doTest("(x: int, y: bool, z: Any) -> str",
            """
-             def f(x, # type: int\s
+             def f(x, # type: int
                    y # type: bool
                    ,z):
                  # type: (...) -> str
@@ -983,7 +983,7 @@ public class PyTypingTest extends PyTestCase {
 
              class C:
                  attr: Any = None
-                \s
+                
                  def m(self, x):
                      self.attr = x
                      expr = self.attr""");
@@ -1003,7 +1003,7 @@ public class PyTypingTest extends PyTestCase {
            """
              class C:
                  attr: int
-                \s
+                
              expr = C().attr""");
   }
 
@@ -1080,7 +1080,7 @@ public class PyTypingTest extends PyTestCase {
 
              async def g() -> AsyncGenerator[int, str]:
                  s = (yield 42)
-                \s
+                
              expr = g()""");
   }
 
@@ -1092,9 +1092,9 @@ public class PyTypingTest extends PyTestCase {
              async def coroutine() -> Generator[int, Any, Any]:
                  def gen():
                      yield 42
-                \s
+                
                  return gen()
-                \s
+                
              expr = coroutine()""");
   }
 
@@ -1189,7 +1189,7 @@ public class PyTypingTest extends PyTestCase {
              class MyClass:
                  pass
 
-             def f(x: Type[MyClass]):\s
+             def f(x: Type[MyClass]):
                  expr = x""");
   }
 
@@ -1229,7 +1229,7 @@ public class PyTypingTest extends PyTestCase {
 
              def f(x: T) -> Type[T]:
                  return type(x)
-                \s
+                
              expr = f(42)""");
   }
 
@@ -1380,7 +1380,7 @@ public class PyTypingTest extends PyTestCase {
 
                  def __init__(self):
                      self.attr = 'foo'
-                    \s
+                    
                  def m(self):
                      expr = self.attr
              """);
@@ -1457,7 +1457,7 @@ public class PyTypingTest extends PyTestCase {
                  def factory(cls: Type[T]) -> T:
                      pass
 
-             class D(C):\s
+             class D(C):
                  pass
 
              expr = D.factory()""");
@@ -1476,7 +1476,7 @@ public class PyTypingTest extends PyTestCase {
                  def factory(cls: Type[T]) -> T:
                      pass
 
-             class D(C):\s
+             class D(C):
                  pass
 
              expr = D().factory()""");
@@ -1497,7 +1497,7 @@ public class PyTypingTest extends PyTestCase {
              class A(Base):
                  pass
 
-             class B(Base):\s
+             class B(Base):
                  pass
 
              expr = (A() or B()).method()""");
@@ -1628,7 +1628,7 @@ public class PyTypingTest extends PyTestCase {
                      # type: (Type[T]) -> T
                      pass
 
-             class D(C):\s
+             class D(C):
                  pass
 
              expr = D.factory()""");
@@ -1991,7 +1991,7 @@ public class PyTypingTest extends PyTestCase {
            """
              class A:
                def __or__(self, other) -> int: return 5
-              \s
+              
              expr = A() | A()""");
   }
 
@@ -2554,7 +2554,7 @@ public class PyTypingTest extends PyTestCase {
              MyType = Tuple[int, T, *Ts]
              MyType1 = MyType[str, bool, *Ts]
 
-             t: MyType1[list[str], dict[str, int]]  # first place \s
+             t: MyType1[list[str], dict[str, int]]  # first place 
              expr = t
              """);
   }
@@ -3089,7 +3089,7 @@ public class PyTypingTest extends PyTestCase {
   public void testGenericProtocolUnificationGenericImplementation() {
     doTest("int",
            """
-             from typing import Generic, Protocol, TypeVar\s
+             from typing import Generic, Protocol, TypeVar
 
              T1 = TypeVar('T1')
              T2 = TypeVar('T2')
@@ -3112,7 +3112,7 @@ public class PyTypingTest extends PyTestCase {
   public void testGenericProtocolUnificationNonGenericImplementationWithGenericSuperclass() {
     doTest("int",
            """
-             from typing import Generic, Protocol, TypeVar\s
+             from typing import Generic, Protocol, TypeVar
 
              T1 = TypeVar('T1')
              T2 = TypeVar('T2')
@@ -3138,7 +3138,7 @@ public class PyTypingTest extends PyTestCase {
   public void testGenericProtocolUnificationGenericImplementationWithGenericSuperclass() {
     doTest("int",
            """
-             from typing import Generic, Protocol, TypeVar\s
+             from typing import Generic, Protocol, TypeVar
 
              T1 = TypeVar('T1')
              T2 = TypeVar('T2')
@@ -3164,7 +3164,7 @@ public class PyTypingTest extends PyTestCase {
   public void testGenericProtocolUnificationGenericImplementationWithGenericSuperclassAndExtraParameter() {
     doTest("int",
            """
-             from typing import Generic, Protocol, TypeVar\s
+             from typing import Generic, Protocol, TypeVar
 
              T1 = TypeVar('T1')
              T2 = TypeVar('T2')

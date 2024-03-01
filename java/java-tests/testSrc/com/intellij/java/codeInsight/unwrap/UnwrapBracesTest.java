@@ -44,11 +44,11 @@ public class UnwrapBracesTest extends UnwrapTestCase {
   public void testTrimmingTheLeadingAndTrailingWhileSpaces() {
     assertUnwrapped("""
                       {
-                         \s
-                         \s
+                         
+                         
                           int i<caret> = 0;
-                         \s
-                         \s
+                         
+                         
                       }
                       """,
 

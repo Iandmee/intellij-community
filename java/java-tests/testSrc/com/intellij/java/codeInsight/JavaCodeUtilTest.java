@@ -60,7 +60,7 @@ public class JavaCodeUtilTest extends LightJavaCodeInsightTestCase {
 
                    class Foo {
                        void foo(){
-                           ArrayList\s
+                           ArrayList
                        }
                    }""", getFile().getText());
   }

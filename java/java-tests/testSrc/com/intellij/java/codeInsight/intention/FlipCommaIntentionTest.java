@@ -70,14 +70,14 @@ public class FlipCommaIntentionTest extends IPPTestCase {
     doTest("""
              enum E {
                A(1)/*_Flip ','*/,
-               B(C(2),\s
+               B(C(2),
                D(5);
              }
              """,
 
            """
              enum E {
-               B(C(2),\s
+               B(C(2),
                D(5),
                A(1);
              }

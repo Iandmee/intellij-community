@@ -328,8 +328,7 @@ public class AddImportActionTest extends LightJavaCodeInsightFixtureTestCase {
       ("""
 
                import java.lang.annotation.*;
-               @Target(ElementType.TYPE_USE) @interface TA { }\
-         """).stripIndent().trim());
+               @Target(ElementType.TYPE_USE) @interface TA { }         """).stripIndent().trim());
 
     myFixture.configureByText("a.java",
                               ("""
@@ -337,8 +336,7 @@ public class AddImportActionTest extends LightJavaCodeInsightFixtureTestCase {
                                        class Test {
                                            @TA
                                            public <caret>Collection<@TA String> c;
-                                       }\
-                                 """).stripIndent()
+                                       }                                 """).stripIndent()
                                 .trim());
 
     importClass();
@@ -351,8 +349,7 @@ public class AddImportActionTest extends LightJavaCodeInsightFixtureTestCase {
                class Test {
                    @TA
                    public <caret>Collection<@TA String> c;
-               }\
-         """).stripIndent()
+               }         """).stripIndent()
         .trim());
   }
 
@@ -361,16 +358,14 @@ public class AddImportActionTest extends LightJavaCodeInsightFixtureTestCase {
       ("""
 
                import java.lang.annotation.*;
-               @Target(ElementType.TYPE_USE) @interface TA { }\
-         """).stripIndent().trim());
+               @Target(ElementType.TYPE_USE) @interface TA { }         """).stripIndent().trim());
 
     myFixture.configureByText("a.java",
                               ("""
 
                                        class Test {
                                            java.u<caret>til.@TA Collection<@TA String> c;
-                                       }\
-                                 """).stripIndent()
+                                       }                                 """).stripIndent()
                                 .trim());
 
     reimportClass();
@@ -382,8 +377,7 @@ public class AddImportActionTest extends LightJavaCodeInsightFixtureTestCase {
 
                class Test {
                    <caret>@TA Collection<@TA String> c;
-               }\
-         """).stripIndent()
+               }         """).stripIndent()
         .trim());
   }
 
@@ -392,8 +386,7 @@ public class AddImportActionTest extends LightJavaCodeInsightFixtureTestCase {
 
                                                  class Test {
                                                      @Nullable Collection<caret> c;
-                                                 }\
-                                           """).stripIndent().trim());
+                                                 }                                           """).stripIndent().trim());
 
     importClass();
 
@@ -405,8 +398,7 @@ public class AddImportActionTest extends LightJavaCodeInsightFixtureTestCase {
                class Test {
                    @Nullable
                    Collection<caret> c;
-               }\
-         """).stripIndent()
+               }         """).stripIndent()
         .trim());
   }
 
@@ -505,7 +497,7 @@ public class AddImportActionTest extends LightJavaCodeInsightFixtureTestCase {
       import foo.Foo;
       class Test {
           {
-            F<caret>oo\s
+            F<caret>oo
           }
       }
       """);
@@ -749,7 +741,7 @@ public class AddImportActionTest extends LightJavaCodeInsightFixtureTestCase {
 
       class Foo {
         <Context> java.util.ArrayList<Contex<caret>t> abc
-      } \s
+      } 
       """);
     assertTrue(myFixture.filterAvailableIntentions("Import class").isEmpty());
   }
@@ -760,7 +752,7 @@ public class AddImportActionTest extends LightJavaCodeInsightFixtureTestCase {
 
       class Foo {
         <Context> Contex<caret>t
-      } \s
+      } 
       """);
     assertTrue(myFixture.filterAvailableIntentions("Import class").isEmpty());
   }
@@ -771,7 +763,7 @@ public class AddImportActionTest extends LightJavaCodeInsightFixtureTestCase {
 
       class Bar {
         F<caret>oo abc;
-      } \s
+      } 
       """);
     assertFalse(myFixture.filterAvailableIntentions("Import class").isEmpty());
   }

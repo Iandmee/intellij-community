@@ -81,7 +81,7 @@ public class ReferenceInjectionTest extends AbstractLanguageInjectionTestCase {
       class Foo {
           String bar() {
               return "ba<caret>r.xml";
-          }   \s
+          }   
       }""");
     assertNull(getInjectedReferences());
 
@@ -99,7 +99,7 @@ public class ReferenceInjectionTest extends AbstractLanguageInjectionTestCase {
       class Survive {
           String bar() {
               return "ba<caret>r.xml";
-          }   \s
+          }   
       }""");
     assertNull(getInjectedReferences());
 
@@ -127,7 +127,7 @@ public class ReferenceInjectionTest extends AbstractLanguageInjectionTestCase {
           String bar() {
               String result = "{\\"a<caret>\\" : 1}";
               return result;
-          }   \s
+          }   
       }""");
     InjectLanguageAction.invokeImpl(getProject(),
                                     myFixture.getEditor(),
@@ -138,7 +138,7 @@ public class ReferenceInjectionTest extends AbstractLanguageInjectionTestCase {
                                 String bar() {
                                     String result = "{\\"a\\" : 1}";
                                     return result;
-                                }   \s
+                                }   
                             }""");
     assertInjectedLangAtCaret("JSON");
     undo();
@@ -165,7 +165,7 @@ public class ReferenceInjectionTest extends AbstractLanguageInjectionTestCase {
           @org.intellij.lang.annotations.Language("file-reference")
           String bar() {
              return "<error descr="Cannot resolve file 'unknown.file'">unknown.file</error>";
-          } \s
+          } 
       }""");
     myFixture.testHighlighting();
   }
@@ -176,7 +176,7 @@ public class ReferenceInjectionTest extends AbstractLanguageInjectionTestCase {
           String bar() {
               String result = "{\\"a<caret>\\" : 1}";
               return result;
-          }   \s
+          }   
       }""");
     PsiLanguageInjectionHost injectionHost = myFixture.findElementByText("\"{\\\"a\\\" : 1}\"", PsiLanguageInjectionHost.class);
     SmartPsiElementPointer<PsiLanguageInjectionHost> hostPtr = SmartPointerManager.createPointer(injectionHost);
@@ -192,7 +192,7 @@ public class ReferenceInjectionTest extends AbstractLanguageInjectionTestCase {
                                 String bar() {
                                     String result = "{\\"a\\" : 1}";
                                     return result;
-                                }   \s
+                                }   
                             }""");
     assertInjectedLangAtCaret("JSON");
 
@@ -204,7 +204,7 @@ public class ReferenceInjectionTest extends AbstractLanguageInjectionTestCase {
                                 String bar() {
                                     @Language("JSON") String result = "{\\"a\\" : 1}";
                                     return result;
-                                }   \s
+                                }   
                             }""");
     assertInjectedLangAtCaret("JSON");
 
@@ -218,7 +218,7 @@ public class ReferenceInjectionTest extends AbstractLanguageInjectionTestCase {
           String bar() {
               String result = "ba<caret>r.xml";
               return result;
-          }   \s
+          }   
       }""");
     PsiLanguageInjectionHost injectionHost = myFixture.findElementByText("\"bar.xml\"", PsiLanguageInjectionHost.class);
     SmartPsiElementPointer<PsiLanguageInjectionHost> hostPtr = SmartPointerManager.createPointer(injectionHost);
@@ -231,7 +231,7 @@ public class ReferenceInjectionTest extends AbstractLanguageInjectionTestCase {
                                 String bar() {
                                     String result = "bar.xml";
                                     return result;
-                                }   \s
+                                }   
                             }""");
     assertTrue(assertOneElement(getInjectedReferences()) instanceof FileReference);
 
@@ -243,7 +243,7 @@ public class ReferenceInjectionTest extends AbstractLanguageInjectionTestCase {
                                 String bar() {
                                     @Language("file-reference") String result = "bar.xml";
                                     return result;
-                                }   \s
+                                }   
                             }""");
     assertTrue(assertOneElement(getInjectedReferences()) instanceof FileReference);
 

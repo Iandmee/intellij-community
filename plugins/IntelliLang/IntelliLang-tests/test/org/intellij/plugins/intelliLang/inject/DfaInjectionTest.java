@@ -14,7 +14,7 @@ public class DfaInjectionTest extends LightJavaCodeInsightFixtureTestCase {
                         String javaCode = "class X {<error descr="'}' expected">"</error>;
                         foo(javaCode);
                       }
-                     \s
+                     
                       native void foo(@Language("JAVA") String str);
                     }""");
   }

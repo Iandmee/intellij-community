@@ -188,7 +188,7 @@ public class ManifestParserTest extends LightIdeaTestCase {
            """
              ManifestFile:MANIFEST.MF
                Section
-                 Header:Manifest-Version\s
+                 Header:Manifest-Version
                    ManifestToken:HEADER_NAME_TOKEN('Manifest-Version ')
                    ManifestToken:COLON_TOKEN(':')
                    ManifestToken:SIGNIFICANT_SPACE_TOKEN(' ')

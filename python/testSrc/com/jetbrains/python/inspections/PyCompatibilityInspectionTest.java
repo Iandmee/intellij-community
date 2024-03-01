@@ -204,7 +204,7 @@ public class PyCompatibilityInspectionTest extends PyInspectionTestCase {
                        try:
                            something_that_raises_error2()
                        except BaseException as e:
-                           raise  \s""");
+                           raise  """);
   }
 
   // PY-15360

@@ -188,7 +188,7 @@ public class CreateMethodFromUsageTemplateTest extends LightJavaCodeInsightFixtu
             }
 
             private void foo(java.util.List<String> list) {
-               \s
+               
             }
         }
         """);
@@ -218,7 +218,7 @@ public class CreateMethodFromUsageTemplateTest extends LightJavaCodeInsightFixtu
               }
 
               private void foo(List<String> list) {
-                 \s
+                 
               }
           }""");
   }

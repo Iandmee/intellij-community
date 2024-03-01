@@ -17,6 +17,7 @@ import org.jetbrains.annotations.SystemIndependent
 import java.io.IOException
 import java.nio.file.Path
 import kotlin.io.path.pathString
+import java.nio.file.FileSystems
 
 fun VirtualFile.validOrNull() = if (isValid) this else null
 
@@ -58,7 +59,7 @@ fun VirtualFile.findPsiFile(project: Project): PsiFile? {
 private fun VirtualFile.relativizeToClosestAncestor(
   relativePath: String
 ): Pair<VirtualFile, Path> {
-  val basePath = Path.of(path)
+  val basePath = FileSystems.getDefault().getPath(path);
   val (normalizedBasePath, normalizedRelativePath) = basePath.relativizeToClosestAncestor(relativePath)
   var baseVirtualFile = this
   repeat(basePath.nameCount - normalizedBasePath.nameCount) {

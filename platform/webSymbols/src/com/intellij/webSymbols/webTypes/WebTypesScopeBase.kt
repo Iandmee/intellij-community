@@ -37,7 +37,7 @@ abstract class WebTypesScopeBase :
   private val frameworkConfigs = mutableMapOf<WebTypes, FrameworkConfig>()
   private val contextsConfigs = mutableMapOf<WebTypes, ContextsConfig>()
 
-  private val contextRulesCache = createContextRulesCache()
+  private val contextRulesCache: MultiMap<ContextKind, WebSymbolsContextKindRules> = MultiMap()
 
   private val nameConversionRulesCache = createNameConversionRulesCache()
 
@@ -46,8 +46,7 @@ abstract class WebTypesScopeBase :
   override fun getNameConversionRulesProvider(framework: FrameworkId): WebSymbolNameConversionRulesProvider =
     WebTypesSymbolNameConversionRulesProvider(framework, this)
 
-  override fun getContextRules(): MultiMap<ContextKind, WebSymbolsContextKindRules> =
-    contextRulesCache.value
+  override fun getContextRules(): MultiMap<ContextKind, WebSymbolsContextKindRules> = contextRulesCache
 
   protected open fun addWebTypes(webTypes: WebTypes, context: WebTypesJsonOrigin) {
     addRoot(webTypes.contributions, context)
@@ -84,7 +83,7 @@ abstract class WebTypesScopeBase :
 
   override fun dropCaches() {
     super.dropCaches()
-    contextRulesCache.drop()
+    contextRulesCache.clear()
     nameConversionRulesCache.drop()
   }
 
@@ -106,8 +105,8 @@ abstract class WebTypesScopeBase :
       .flatMap { (namespace, kind, list) ->
         list.map { it.wrap(origin, this@WebTypesScopeBase, namespace, kind) }
       }
-
-  private fun createContextRulesCache(): ClearableLazyValue<MultiMap<ContextKind, WebSymbolsContextKindRules>> =
+ /*
+  private fun createContextRulesCache(): ClearableLazyValue<> =
     ClearableLazyValue.create {
       data class RulesEntry(val kind: ContextKind,
                             val name: ContextName,
@@ -136,7 +135,7 @@ abstract class WebTypesScopeBase :
       }
       result
     }
-
+  */
   private fun <T> createEnablementCache(accessor: (config: FrameworkConfig) -> T?,
                                         accessor2: (config: ContextConfig) -> T?): ClearableLazyValue<Map<String, Map<String, List<T>>>> =
     ClearableLazyValue.create {

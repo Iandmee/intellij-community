@@ -1,0 +1,51 @@
+load("//tools/base/bazel:bazel.bzl", "iml_module")
+
+# managed by go/iml_to_build
+iml_module(
+    name = "intellij.java.testFramework",
+    srcs = ["src"],
+    iml_files = ["intellij.java.testFramework.iml"],
+    javacopts_from_jps = ["-Xlint:unchecked"],
+    visibility = ["//visibility:public"],
+    # do not sort: must match IML order
+    exports = [
+        "//intellij-community/java/openapi:intellij.java",
+        "//intellij-community/platform/util:intellij.platform.util",
+        "//intellij-community/platform/lang-api:intellij.platform.lang",
+        "//intellij-community/java/java-impl:intellij.java.impl",
+        "//intellij-community/java/execution/impl:intellij.java.execution.impl",
+        "//intellij-community/platform/testFramework:intellij.platform.testFramework",
+        "//intellij-community/xml/relaxng:intellij.relaxng",
+        "//intellij-community/java/idea-ui:intellij.java.ui",
+        "//intellij-community/java/debugger/impl:intellij.java.debugger.impl",
+        "//intellij-community/java/execution/openapi:intellij.java.execution",
+    ],
+    runtime_deps = ["//intellij-community/platform/external-system-impl:intellij.platform.externalSystem.impl"],
+    # do not sort: must match IML order
+    deps = [
+        "//intellij-community/java/openapi:intellij.java[module]",
+        "//intellij-community/platform/util:intellij.platform.util[module]",
+        "//intellij-community:JUnit4",
+        "//intellij-community/platform/util/jdom:intellij.platform.util.jdom[module]",
+        "//intellij-community/platform/lang-api:intellij.platform.lang[module]",
+        "//intellij-community/platform/lang-impl:intellij.platform.lang.impl[module]",
+        "//intellij-community/java/compiler/impl:intellij.java.compiler.impl[module]",
+        "//intellij-community/java/java-impl:intellij.java.impl[module]",
+        "//intellij-community/java/execution/impl:intellij.java.execution.impl[module]",
+        "//intellij-community/platform/testFramework:intellij.platform.testFramework[module]",
+        "//intellij-community/xml/relaxng:intellij.relaxng[module, test]",
+        "//intellij-community/java/idea-ui:intellij.java.ui[module]",
+        "//intellij-community/java/debugger/impl:intellij.java.debugger.impl[module]",
+        "//intellij-community/java/execution/openapi:intellij.java.execution[module]",
+        "//intellij-community/jps/jps-builders:intellij.platform.jps.build[module]",
+        "//intellij-community:StreamEx",
+        "//intellij-community:fastutil-min",
+        "//intellij-community/platform/core-ui:intellij.platform.core.ui[module]",
+        "//intellij-community/platform/code-style-impl:intellij.platform.codeStyle.impl[module]",
+        "//intellij-community/platform/platform-util-io:intellij.platform.ide.util.io[module]",
+        "//intellij-community:ASM",
+        "//intellij-community:org.codehaus.groovy_groovy",
+        "//intellij-community/java/java-impl-refactorings:intellij.java.impl.refactorings[module]",
+        "//intellij-community/platform/xdebugger-impl:intellij.platform.debugger.impl[module]",
+    ],
+)

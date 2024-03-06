@@ -1,0 +1,40 @@
+load("//tools/base/bazel:bazel.bzl", "iml_module")
+
+# managed by go/iml_to_build
+iml_module(
+    name = "kotlin.code-insight.impl-base",
+    srcs = ["src"],
+    iml_files = ["kotlin.code-insight.impl-base.iml"],
+    javacopts_from_jps = ["-Xlint:unchecked"],
+    resources = ["resources"],
+    visibility = ["//visibility:public"],
+    # do not sort: must match IML order
+    deps = [
+        "//intellij-community:jetbrains-annotations",
+        "//intellij-community:kotlin-stdlib",
+        "//intellij-community:kotlin-reflect",
+        "//intellij-community:kotlinc.kotlin-compiler-common",
+        "//intellij-community:kotlinc.high-level-api",
+        "//intellij-community:kotlinc.high-level-api-fir",
+        "//intellij-community/plugins/kotlin/base/frontend-agnostic:kotlin.base.frontend-agnostic[module]",
+        "//intellij-community/plugins/kotlin/base/util:kotlin.base.util[module]",
+        "//intellij-community/plugins/kotlin/base/psi:kotlin.base.psi[module]",
+        "//intellij-community/plugins/kotlin/base/resources:kotlin.base.resources[module]",
+        "//intellij-community/plugins/kotlin/base/code-insight:kotlin.base.code-insight[module]",
+        "//intellij-community/plugins/kotlin/base/analysis-api/analysis-api-utils:kotlin.base.analysis-api.utils[module]",
+        "//intellij-community/plugins/kotlin/base/project-structure:kotlin.base.project-structure[module]",
+        "//intellij-community/plugins/kotlin/formatter:kotlin.formatter[module]",
+        "//intellij-community/plugins/kotlin/code-insight/api:kotlin.code-insight.api[module]",
+        "//intellij-community/plugins/kotlin/code-insight/utils:kotlin.code-insight.utils[module]",
+        "//intellij-community/platform/lang-impl:intellij.platform.lang.impl[module]",
+        "//intellij-community/platform/editor-ui-api:intellij.platform.editor[module]",
+        "//intellij-community/java/java-psi-api:intellij.java.psi[module]",
+        "//intellij-community/java/java-structure-view:intellij.java.structureView[module]",
+        "//intellij-community/plugins/kotlin/base/statistics:kotlin.base.statistics[module]",
+        "//intellij-community/platform/statistics:intellij.platform.statistics[module]",
+        "//intellij-community/platform/code-style-impl:intellij.platform.codeStyle.impl[module]",
+        "//intellij-community/java/java-impl:intellij.java.impl[module]",
+        "//intellij-community/plugins/kotlin/base/indices:kotlin.base.indices[module]",
+        "//intellij-community/java/execution/impl:intellij.java.execution.impl[module]",
+    ],
+)

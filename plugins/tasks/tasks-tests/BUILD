@@ -1,0 +1,40 @@
+load("//tools/base/bazel:bazel.bzl", "iml_module")
+
+# managed by go/iml_to_build
+iml_module(
+    name = "intellij.tasks.tests",
+    iml_files = ["intellij.tasks.tests.iml"],
+    javacopts_from_jps = ["-Xlint:unchecked"],
+    test_srcs = ["test"],
+    visibility = ["//visibility:public"],
+    exports = ["//intellij-community/java/testFramework:intellij.java.testFramework"],
+    runtime_deps = ["//intellij-community/spellchecker:intellij.spellchecker"],
+    # do not sort: must match IML order
+    deps = [
+        "//intellij-community/plugins/tasks/tasks-api:intellij.tasks[module]",
+        "//intellij-community/plugins/tasks/tasks-core:intellij.tasks.core[module]",
+        "//intellij-community/plugins/tasks/tasks-java:intellij.tasks.java[module]",
+        "//intellij-community/plugins/tasks/tasks-compatibility:intellij.tasks.compatibility[module]",
+        "//intellij-community:JUnit4[test]",
+        "//intellij-community/java/testFramework:intellij.java.testFramework[module, test]",
+        "//intellij-community/platform/vcs-impl:intellij.platform.vcs.impl[module]",
+        "//intellij-community:XmlRPC",
+        "//intellij-community/plugins/xslt-debugger:intellij.xslt.debugger[module]",
+        "//intellij-community/platform/xdebugger-impl:intellij.platform.debugger.impl[module, test]",
+        "//intellij-community:gson",
+        "//intellij-community/plugins/tasks/tasks-core/jira:intellij.tasks.jira[module, test]",
+        "//intellij-community/platform/testFramework:intellij.platform.testFramework[module, test]",
+        "//intellij-community/plugins/git4idea:intellij.vcs.git[module, test]",
+        "//intellij-community/plugins/hg4idea:intellij.vcs.hg[module, test]",
+        "//intellij-community/platform/vcs-tests:intellij.platform.vcs.testFramework[module, test]",
+        "//intellij-community/platform/tasks-platform-api:intellij.platform.tasks[module, test]",
+        "//intellij-community/platform/tasks-platform-impl:intellij.platform.tasks.impl[module, test]",
+        "//intellij-community:easymock[test]",
+        "//intellij-community:Objenesis[test]",
+        "//intellij-community:http-client[test]",
+        "//intellij-community:assertJ[test]",
+        "//intellij-community:StreamEx[test]",
+        "//intellij-community/platform/core-ui:intellij.platform.core.ui[module]",
+        "//intellij-community/platform/util/jdom:intellij.platform.util.jdom[module, test]",
+    ],
+)

@@ -1,0 +1,41 @@
+load("//tools/base/bazel:bazel.bzl", "iml_module")
+
+# managed by go/iml_to_build
+iml_module(
+    name = "intellij.settingsSync",
+    srcs = ["src"],
+    iml_files = ["intellij.settingsSync.iml"],
+    javacopts_from_jps = ["-Xlint:unchecked"],
+    resources = ["resources"],
+    test_srcs = ["tests"],
+    visibility = ["//visibility:public"],
+    # do not sort: must match IML order
+    deps = [
+        "//intellij-community/platform/platform-api:intellij.platform.ide[module]",
+        "//intellij-community/platform/configuration-store-impl:intellij.platform.configurationStore.impl[module]",
+        "//intellij-community/platform/projectModel-impl:intellij.platform.projectModel.impl[module]",
+        "//intellij-community/platform/platform-impl:intellij.platform.ide.impl[module]",
+        "//m2:jetbrains.intellij.deps.eclipse.jgit",
+        "//intellij-community:slf4j-api",
+        "//intellij-community/platform/service-container:intellij.platform.serviceContainer[module]",
+        "//intellij-community/platform/testFramework:intellij.platform.testFramework[module, test]",
+        "//intellij-community:kotlinx-coroutines-core",
+        "//intellij-community:kotlin-reflect[test]",
+        "//intellij-community:cloud-config-client",
+        "//intellij-community/platform/lang-impl:intellij.platform.lang.impl[module]",
+        "//intellij-community/platform/util/jdom:intellij.platform.util.jdom[module]",
+        "//intellij-community/platform/core-ui:intellij.platform.core.ui[module]",
+        "//intellij-community:jackson",
+        "//intellij-community:jackson-databind",
+        "//intellij-community:jackson-module-kotlin",
+        "//intellij-community:kotlinx-serialization-core",
+        "//intellij-community:kotlinx-serialization-json",
+        "//intellij-community:kotlinx-coroutines-test[test]",
+        "//intellij-community/platform/testFramework/extensions:intellij.platform.testExtensions[module, test]",
+        "//intellij-community/platform/statistics:intellij.platform.statistics[module]",
+        "//intellij-community/platform/workspace/jps:intellij.platform.workspace.jps[module]",
+        "//intellij-community/platform/testFramework/junit5:intellij.platform.testFramework.junit5[module, test]",
+        "//intellij-community/plugins/performanceTesting:intellij.performanceTesting[module]",
+        "//intellij-community:mockito[test]",
+    ],
+)

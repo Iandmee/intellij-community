@@ -1,0 +1,42 @@
+load("//tools/base/bazel:bazel.bzl", "iml_module")
+
+# managed by go/iml_to_build
+iml_module(
+    name = "kotlin.compiler-reference-index.tests",
+    iml_files = ["kotlin.compiler-reference-index.tests.iml"],
+    javacopts_from_jps = ["-Xlint:unchecked"],
+    test_srcs = ["test"],
+    visibility = ["//visibility:public"],
+    # do not sort: must match IML order
+    deps = [
+        "//intellij-community:kotlin-stdlib",
+        "//intellij-community:kotlin-reflect",
+        "//intellij-community:kotlinc.kotlin-compiler-common",
+        "//intellij-community:kotlinc.kotlin-compiler-tests",
+        "//intellij-community:gson[test]",
+        "//intellij-community:JUnit4[test]",
+        "//intellij-community/plugins/kotlin/plugin/k1:kotlin.plugin.k1[module, test]",
+        "//intellij-community/plugins/kotlin/base/psi:kotlin.base.psi[module]",
+        "//intellij-community/plugins/kotlin/base/plugin:kotlin.base.plugin[module]",
+        "//intellij-community/plugins/kotlin/compiler-reference-index:kotlin.compiler-reference-index[module]",
+        "//intellij-community/plugins/kotlin/frontend-independent:kotlin.fir.frontend-independent[module]",
+        "//intellij-community/plugins/kotlin/tests-common:kotlin.tests-common[module, test]",
+        "//intellij-community/plugins/kotlin/idea/tests:kotlin.idea.tests[module, test]",
+        "//intellij-community/jps/jps-builders:intellij.platform.jps.build[module]",
+        "//intellij-community/platform/core-api:intellij.platform.core[module]",
+        "//intellij-community/platform/indexing-api:intellij.platform.indexing[module]",
+        "//intellij-community/platform/projectModel-api:intellij.platform.projectModel[module]",
+        "//intellij-community/platform/projectModel-impl:intellij.platform.projectModel.impl[module]",
+        "//intellij-community/platform/editor-ui-api:intellij.platform.editor[module]",
+        "//intellij-community/platform/analysis-impl:intellij.platform.analysis.impl[module]",
+        "//intellij-community/platform/core-impl:intellij.platform.core.impl[module]",
+        "//intellij-community/java/java-psi-api:intellij.java.psi[module]",
+        "//intellij-community/java/java-psi-impl:intellij.java.psi.impl[module]",
+        "//intellij-community/java/compiler/impl:intellij.java.compiler.impl[module]",
+        "//intellij-community/java/java-indexing-impl:intellij.java.indexing.impl[module]",
+        "//intellij-community/java/testFramework:intellij.java.testFramework[module, test]",
+        "//intellij-community/java/java-tests:intellij.java.tests[module, test]",
+        "//intellij-community/plugins/kotlin/idea:kotlin.idea[module, test]",
+        "//intellij-community/plugins/kotlin/base/compiler-configuration:kotlin.base.compiler-configuration[module, test]",
+    ],
+)

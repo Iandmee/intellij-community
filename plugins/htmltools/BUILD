@@ -1,0 +1,19 @@
+load("//tools/base/bazel:bazel.bzl", "iml_module")
+
+# managed by go/iml_to_build
+iml_module(
+    name = "intellij.html.tools",
+    srcs = ["src"],
+    iml_files = ["intellij.html.tools.iml"],
+    javacopts_from_jps = ["-Xlint:unchecked"],
+    resources = ["resources"],
+    visibility = ["//visibility:public"],
+    # do not sort: must match IML order
+    deps = [
+        "//intellij-community/xml/impl:intellij.xml.impl[module]",
+        "//intellij-community/platform/webSymbols:intellij.platform.webSymbols[module]",
+        "//intellij-community/platform/lang-impl:intellij.platform.lang.impl[module]",
+        "//intellij-community/images:intellij.platform.images[module]",
+        "//intellij-community/platform/core-ui:intellij.platform.core.ui[module]",
+    ],
+)

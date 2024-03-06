@@ -1,0 +1,40 @@
+load("//tools/base/bazel:bazel.bzl", "iml_module")
+
+# managed by go/iml_to_build
+iml_module(
+    name = "kotlin.fir.frontend-independent",
+    srcs = ["src"],
+    iml_files = ["kotlin.fir.frontend-independent.iml"],
+    javacopts_from_jps = ["-Xlint:unchecked"],
+    resources = ["resources-en"],
+    visibility = ["//visibility:public"],
+    # do not sort: must match IML order
+    deps = [
+        "//intellij-community:kotlin-stdlib",
+        "//intellij-community:kotlin-reflect",
+        "//intellij-community:kotlinc.kotlin-compiler-common",
+        "//intellij-community:kotlinc.kotlin-compiler-fe10",
+        "//intellij-community:kotlinc.kotlin-jps-common",
+        "//intellij-community:Guava",
+        "//intellij-community/plugins/kotlin/base/frontend-agnostic:kotlin.base.frontend-agnostic[module]",
+        "//intellij-community/plugins/kotlin/base/facet:kotlin.base.facet[module]",
+        "//intellij-community/plugins/kotlin/base/util:kotlin.base.util[module]",
+        "//intellij-community/plugins/kotlin/base/psi:kotlin.base.psi[module]",
+        "//intellij-community/plugins/kotlin/base/analysis:kotlin.base.analysis[module]",
+        "//intellij-community/plugins/kotlin/highlighting/highlighting-shared:kotlin.highlighting.shared[module]",
+        "//intellij-community/plugins/kotlin/base/code-insight:kotlin.base.code-insight[module]",
+        "//intellij-community/platform/lang-api:intellij.platform.lang[module]",
+        "//intellij-community/platform/platform-impl:intellij.platform.ide.impl[module]",
+        "//intellij-community/java/java-analysis-impl:intellij.java.analysis.impl[module]",
+        "//intellij-community/java/openapi:intellij.java[module]",
+        "//intellij-community/java/java-impl:intellij.java.impl[module]",
+        "//intellij-community/xml/xml-psi-impl:intellij.xml.psi.impl[module]",
+        "//intellij-community/platform/core-ui:intellij.platform.core.ui[module]",
+        "//intellij-community/plugins/kotlin/code-insight/api:kotlin.code-insight.api[module]",
+        "//intellij-community/plugins/kotlin/base/resources:kotlin.base.resources[module]",
+        "//intellij-community/plugins/kotlin/code-insight/impl-base:kotlin.code-insight.impl-base[module]",
+        "//intellij-community/plugins/kotlin/code-insight/utils:kotlin.code-insight.utils[module]",
+        "//intellij-community/platform/util:intellij.platform.util[module]",
+        "//intellij-community/plugins/maven:intellij.maven[module]",
+    ],
+)

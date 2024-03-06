@@ -1,0 +1,51 @@
+load("//tools/base/bazel:bazel.bzl", "iml_module")
+
+# managed by go/iml_to_build
+iml_module(
+    name = "intellij.ant",
+    srcs = ["src"],
+    iml_files = ["intellij.ant.iml"],
+    javacopts_from_jps = ["-Xlint:unchecked"],
+    resources = ["resources"],
+    test_srcs = ["tests/src"],
+    visibility = ["//visibility:public"],
+    # do not sort: must match IML order
+    exports = [
+        "//intellij-community:Ant",
+        "//intellij-community/xml/dom-openapi:intellij.xml.dom",
+    ],
+    # do not sort: must match IML order
+    deps = [
+        "//intellij-community/java/openapi:intellij.java[module]",
+        "//intellij-community/java/testFramework:intellij.java.testFramework[module, test]",
+        "//intellij-community:JUnit4[test]",
+        "//intellij-community:Ant",
+        "//intellij-community/java/compiler/impl:intellij.java.compiler.impl[module]",
+        "//intellij-community/java/java-runtime:intellij.java.rt[module]",
+        "//intellij-community/java/execution/impl:intellij.java.execution.impl[module]",
+        "//intellij-community/xml/impl:intellij.xml.impl[module]",
+        "//intellij-community/plugins/properties:intellij.properties[module]",
+        "//intellij-community/java/execution/openapi:intellij.java.execution[module]",
+        "//intellij-community/java/idea-ui:intellij.java.ui[module]",
+        "//intellij-community/xml/dom-openapi:intellij.xml.dom[module]",
+        "//intellij-community/xml/openapi:intellij.xml[module]",
+        "//intellij-community/platform/util:intellij.platform.util[module]",
+        "//intellij-community/platform/lang-impl:intellij.platform.lang.impl[module]",
+        "//intellij-community/platform/execution-impl:intellij.platform.execution.impl[module]",
+        "//intellij-community/platform/platform-impl:intellij.platform.ide.impl[module]",
+        "//intellij-community/plugins/ant/jps-plugin:intellij.ant.jps[module]",
+        "//intellij-community/xml/dom-impl:intellij.xml.dom.impl[module]",
+        "//intellij-community/plugins/properties/properties-psi-api:intellij.properties.psi[module]",
+        "//intellij-community/platform/util/nanoxml:intellij.platform.util.nanoxml[module]",
+        "//intellij-community:StreamEx",
+        "//intellij-community/platform/statistics:intellij.platform.statistics[module]",
+        "//intellij-community:fastutil-min",
+        "//intellij-community/platform/external-system-api:intellij.platform.externalSystem[module]",
+        "//intellij-community/platform/util-class-loader:intellij.platform.util.classLoader[module]",
+        "//intellij-community/platform/core-ui:intellij.platform.core.ui[module]",
+        "//intellij-community/plugins/properties/properties-psi-impl:intellij.properties.psi.impl[module]",
+        "//intellij-community/platform/platform-util-io:intellij.platform.ide.util.io[module]",
+        "//intellij-community/platform/util/jdom:intellij.platform.util.jdom[module]",
+        "//intellij-community/tools/intellij.tools.ide.metrics.benchmark[module, test]",
+    ],
+)

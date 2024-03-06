@@ -1,0 +1,40 @@
+load("//tools/base/bazel:bazel.bzl", "iml_module")
+
+# managed by go/iml_to_build
+iml_module(
+    name = "kotlin.completion.impl-k2",
+    srcs = ["src"],
+    iml_files = ["kotlin.completion.impl-k2.iml"],
+    javacopts_from_jps = ["-Xlint:unchecked"],
+    resources = ["resources"],
+    visibility = ["//visibility:public"],
+    # do not sort: must match IML order
+    deps = [
+        "//intellij-community:kotlin-stdlib",
+        "//intellij-community:jetbrains-annotations",
+        "//intellij-community:kotlinc.kotlin-compiler-common",
+        "//intellij-community:kotlinc.kotlin-compiler-fir",
+        "//intellij-community:kotlinc.high-level-api",
+        "//intellij-community:kotlinc.high-level-api-fir",
+        "//intellij-community/plugins/kotlin/base/util:kotlin.base.util[module]",
+        "//intellij-community/plugins/kotlin/base/psi:kotlin.base.psi[module]",
+        "//intellij-community/plugins/kotlin/base/facet:kotlin.base.facet[module]",
+        "//intellij-community/plugins/kotlin/base/project-structure:kotlin.base.project-structure[module]",
+        "//intellij-community/plugins/kotlin/base/analysis:kotlin.base.analysis[module]",
+        "//intellij-community/plugins/kotlin/base/analysis-api/analysis-api-utils:kotlin.base.analysis-api.utils[module]",
+        "//intellij-community/plugins/kotlin/base/code-insight:kotlin.base.code-insight[module]",
+        "//intellij-community/plugins/kotlin/base/resources:kotlin.base.resources[module]",
+        "//intellij-community/plugins/kotlin/base/fir/code-insight:kotlin.base.fir.code-insight[module]",
+        "//intellij-community/plugins/kotlin/frontend-independent:kotlin.fir.frontend-independent[module]",
+        "//intellij-community/plugins/kotlin/code-insight/override-implement-shared:kotlin.code-insight.override-implement-shared[module]",
+        "//intellij-community/plugins/kotlin/code-insight/override-implement-k2:kotlin.code-insight.override-implement-k2[module]",
+        "//intellij-community/plugins/kotlin/completion/api:kotlin.completion.api[module]",
+        "//intellij-community/plugins/kotlin/completion/impl-shared:kotlin.completion.impl-shared[module]",
+        "//intellij-community/platform/analysis-impl:intellij.platform.analysis.impl[module]",
+        "//intellij-community/platform/lang-impl:intellij.platform.lang.impl[module]",
+        "//intellij-community/platform/core-ui:intellij.platform.core.ui[module]",
+        "//intellij-community/java/java-psi-api:intellij.java.psi[module]",
+        "//intellij-community:fastutil-min",
+        "//intellij-community/platform/util/text-matching:intellij.platform.util.text.matching[module]",
+    ],
+)

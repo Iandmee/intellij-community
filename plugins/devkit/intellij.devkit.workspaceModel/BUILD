@@ -1,0 +1,41 @@
+load("//tools/base/bazel:bazel.bzl", "iml_module")
+
+# managed by go/iml_to_build
+iml_module(
+    name = "intellij.devkit.workspaceModel",
+    srcs = ["src"],
+    iml_files = ["intellij.devkit.workspaceModel.iml"],
+    javacopts_from_jps = ["-Xlint:unchecked"],
+    package_prefixes = {"src": "com.intellij.devkit.workspaceModel"},
+    resources = ["resources"],
+    visibility = ["//visibility:public"],
+    # do not sort: must match IML order
+    deps = [
+        "//intellij-community/platform/ide-core:intellij.platform.ide.core[module]",
+        "//intellij-community/platform/editor-ui-api:intellij.platform.editor[module]",
+        "//intellij-community/platform/projectModel-api:intellij.platform.projectModel[module]",
+        "//intellij-community:kotlin-stdlib",
+        "//intellij-community:kotlinc.kotlin-compiler-common",
+        "//intellij-community/platform/analysis-api:intellij.platform.analysis[module]",
+        "//intellij-community/java/java-psi-impl:intellij.java.psi.impl[module]",
+        "//intellij-community/platform/platform-resources:intellij.platform.resources[module]",
+        "//intellij-community:kotlinx-collections-immutable",
+        "//intellij-community/platform/platform-api:intellij.platform.ide[module]",
+        "//intellij-community/platform/lang-core:intellij.platform.lang.core[module]",
+        "//intellij-community/platform/indexing-api:intellij.platform.indexing[module]",
+        "//intellij-community/plugins/kotlin/base/indices:kotlin.base.indices[module]",
+        "//intellij-community/platform/core-ui:intellij.platform.core.ui[module]",
+        "//intellij-community/plugins/kotlin/base/project-structure:kotlin.base.project-structure[module]",
+        "//intellij-community/plugins/kotlin/base/fe10/analysis:kotlin.base.fe10.analysis[module]",
+        "//intellij-community:kotlinc.kotlin-compiler-fe10",
+        "//intellij-community/platform/lang-impl:intellij.platform.lang.impl[module]",
+        "//intellij-community/plugins/devkit/devkit-core:intellij.devkit.core[module]",
+        "//intellij-community/java/idea-ui:intellij.java.ui[module]",
+        "//intellij-community/aether-dependency-resolver:intellij.java.aetherDependencyResolver[module]",
+        "//intellij-community/java/openapi:intellij.java[module]",
+        "//intellij-community:workspace-model-codegen",
+        "//intellij-community/platform/util-class-loader:intellij.platform.util.classLoader[module]",
+        "//intellij-community/plugins/kotlin/base/facet:kotlin.base.facet[module]",
+        "//intellij-community:kotlinc.kotlin-jps-common",
+    ],
+)

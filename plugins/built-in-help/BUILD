@@ -1,0 +1,40 @@
+load("//tools/base/bazel:bazel.bzl", "iml_module")
+
+# managed by go/iml_to_build
+iml_module(
+    name = "intellij.platform.builtInHelp",
+    srcs = ["src"],
+    iml_files = ["intellij.platform.builtInHelp.iml"],
+    javacopts_from_jps = ["-Xlint:unchecked"],
+    resources = ["resources"],
+    visibility = ["//visibility:public"],
+    # do not sort: must match IML order
+    deps = [
+        "//intellij-community:kotlin-stdlib",
+        "//intellij-community:netty-codec-http",
+        "//intellij-community:lucene-core",
+        "//intellij-community:lucene-analysis-common",
+        "//intellij-community:lucene-codecs",
+        "//intellij-community:lucene-memory",
+        "//intellij-community:lucene-queries",
+        "//intellij-community:lucene-sandbox",
+        "//intellij-community:lucene-highlighter",
+        "//intellij-community:lucene-queryparser",
+        "//intellij-community:lucene-suggest",
+        "//intellij-community:commons-compress",
+        "//intellij-community:jsoup",
+        "//intellij-community:jaxb-api",
+        "//intellij-community/platform/platform-api:intellij.platform.ide[module]",
+        "//intellij-community/platform/platform-impl:intellij.platform.ide.impl[module]",
+        "//intellij-community/platform/core-impl:intellij.platform.core.impl[module]",
+        "//intellij-community/platform/util:intellij.platform.util[module]",
+        "//intellij-community/platform/built-in-server:intellij.platform.builtInServer.impl[module]",
+        "//intellij-community:netty-buffer",
+        "//intellij-community/platform/platform-util-io:intellij.platform.ide.util.io[module]",
+        "//intellij-community/platform/platform-util-netty:intellij.platform.ide.util.netty[module]",
+        "//intellij-community:jackson",
+        "//intellij-community:jackson-databind",
+        "//intellij-community:jackson-module-kotlin",
+        "//intellij-community/plugins/maven/maven-server-indexer:intellij.maven.server.indexer[module]",
+    ],
+)

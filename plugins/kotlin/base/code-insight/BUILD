@@ -1,0 +1,42 @@
+load("//tools/base/bazel:bazel.bzl", "iml_module")
+
+# managed by go/iml_to_build
+iml_module(
+    name = "kotlin.base.code-insight",
+    srcs = ["src"],
+    iml_files = ["kotlin.base.code-insight.iml"],
+    javacopts_from_jps = ["-Xlint:unchecked"],
+    resources = ["resources"],
+    visibility = ["//visibility:public"],
+    # do not sort: must match IML order
+    deps = [
+        "//intellij-community:jetbrains-annotations",
+        "//intellij-community:kotlin-stdlib",
+        "//intellij-community:kotlin-reflect",
+        "//intellij-community:kotlinc.kotlin-compiler-common",
+        "//intellij-community:kotlinc.kotlin-compiler-fe10",
+        "//intellij-community:kotlinc.high-level-api",
+        "//intellij-community:kotlinc.kotlin-jps-common",
+        "//intellij-community/plugins/kotlin/base/frontend-agnostic:kotlin.base.frontend-agnostic[module]",
+        "//intellij-community/plugins/kotlin/base/util:kotlin.base.util[module]",
+        "//intellij-community/plugins/kotlin/base/project-model:kotlin.base.project-model[module]",
+        "//intellij-community/plugins/kotlin/base/psi:kotlin.base.psi[module]",
+        "//intellij-community/plugins/kotlin/base/plugin:kotlin.base.plugin[module]",
+        "//intellij-community/plugins/kotlin/base/facet:kotlin.base.facet[module]",
+        "//intellij-community/plugins/kotlin/base/project-structure:kotlin.base.project-structure[module]",
+        "//intellij-community/plugins/kotlin/base/indices:kotlin.base.indices[module]",
+        "//intellij-community/plugins/kotlin/base/platforms:kotlin.base.platforms[module]",
+        "//intellij-community/plugins/kotlin/base/resources:kotlin.base.resources[module]",
+        "//intellij-community/platform/analysis-impl:intellij.platform.analysis.impl[module]",
+        "//intellij-community/platform/execution-impl:intellij.platform.execution.impl[module]",
+        "//intellij-community/platform/editor-ui-api:intellij.platform.editor[module]",
+        "//intellij-community/platform/indexing-api:intellij.platform.indexing[module]",
+        "//intellij-community/platform/lang-impl:intellij.platform.lang.impl[module]",
+        "//intellij-community/platform/refactoring:intellij.platform.refactoring[module]",
+        "//intellij-community/platform/external-system-api:intellij.platform.externalSystem[module]",
+        "//intellij-community/java/openapi:intellij.java[module]",
+        "//intellij-community/java/java-impl:intellij.java.impl[module]",
+        "//intellij-community/java/java-analysis-api:intellij.java.analysis[module]",
+        "//intellij-community/platform/backend/workspace:intellij.platform.backend.workspace[module]",
+    ],
+)

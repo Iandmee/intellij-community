@@ -1,0 +1,43 @@
+load("//tools/base/bazel:bazel.bzl", "iml_module")
+
+# managed by go/iml_to_build
+iml_module(
+    name = "intellij.java.debugger.impl",
+    srcs = ["src"],
+    iml_files = ["intellij.java.debugger.impl.iml"],
+    javacopts_from_jps = ["-Xlint:unchecked"],
+    visibility = ["//visibility:public"],
+    exports = ["//intellij-community/java/debugger/openapi:intellij.java.debugger"],
+    # do not sort: must match IML order
+    deps = [
+        "//intellij-community/java/debugger/openapi:intellij.java.debugger[module]",
+        "//intellij-community/java/openapi:intellij.java[module]",
+        "//intellij-community/java/execution/openapi:intellij.java.execution[module]",
+        "//intellij-community/resources:intellij.java.resources[module]",
+        "//intellij-community/platform/xdebugger-impl:intellij.platform.debugger.impl[module]",
+        "//intellij-community/platform/lang-api:intellij.platform.lang[module]",
+        "//intellij-community/java/compiler/openapi:intellij.java.compiler[module]",
+        "//intellij-community/java/compiler/impl:intellij.java.compiler.impl[module]",
+        "//intellij-community/java/java-runtime:intellij.java.rt[module]",
+        "//intellij-community/java/jsp-openapi:intellij.jsp[module]",
+        "//intellij-community/java/java-impl:intellij.java.impl[module]",
+        "//intellij-community/java/java-impl-refactorings:intellij.java.impl.refactorings[module]",
+        "//intellij-community/platform/platform-impl:intellij.platform.ide.impl[module]",
+        "//intellij-community/platform/util:intellij.platform.util[module]",
+        "//intellij-community/jps/jps-builders:intellij.platform.jps.build[module]",
+        "//intellij-community/java/debugger/memory-agent:intellij.java.debugger.memory.agent[module]",
+        "//m2:sa-jdwp",
+        "//intellij-community:jb-jdi",
+        "//intellij-community:StreamEx",
+        "//intellij-community/platform/statistics:intellij.platform.statistics[module]",
+        "//intellij-community/images:intellij.platform.images[module]",
+        "//intellij-community/platform/core-ui:intellij.platform.core.ui[module]",
+        "//intellij-community:fastutil-min",
+        "//intellij-community/platform/platform-util-io-impl:intellij.platform.ide.util.io.impl[module]",
+        "//intellij-community:gson",
+        "//intellij-community:ASM",
+        "//intellij-community/platform/util/jdom:intellij.platform.util.jdom[module]",
+        "//intellij-community/build/deps:intellij.idea.community.build.dependencies[module]",
+        "//intellij-community/platform/build-scripts/downloader:intellij.platform.buildScripts.downloader[module]",
+    ],
+)

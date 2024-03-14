@@ -4,6 +4,7 @@ load("//tools/base/bazel:bazel.bzl", "iml_module")
 iml_module(
     name = "intellij.platform.util.tests",
     iml_files = ["intellij.platform.util.tests.iml"],
+    test_srcs= ["testSrc"],
     javacopts_from_jps = ["-Xlint:unchecked"],
     visibility = ["//visibility:public"],
     # do not sort: must match IML order
